@@ -1,0 +1,119 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "lenis/dist/lenis.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  /* Brand colors */
+  --color-brand-lavenderGrey: #8895B3;
+  --color-brand-softPeriwinkle: #8E94F2;
+  --color-brand-darksoftPeriwinkle: #595c96;
+  --color-brand-wisteriaBlue: #9FA0FF;
+  --color-brand-mauve: #BBADFF;
+  --color-brand-darkmauve: #846df7;
+  --color-brand-cream: #FAF9F7;
+  --color-brand-nearBlack: #1A1A1A;
+  --color-brand-warmGray: #6B6B6B;
+  --color-brand-lightGray: #E8E8E8;
+  --color-brand-deepPurple: #403165;
+  --color-brand-peach: #f8efe9;
+  --color-brand-amethyst: #7c5cbf;
+  --color-brand-popupBg: #EDEDED;
+
+  /* Font */
+  --font-sans: var(--font-inter), sans-serif;
+  --font-mulish: var(--font-mulish), sans-serif;
+  --font-playfair: var(--font-playfair), serif;
+
+  /* System tokens */
+  --color-ring: var(--ring);
+  --color-border: var(--border);
+  --color-foreground: var(--foreground);
+  --color-background: var(--background);
+
+  /* Radius */
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+
+  /* Animations */
+  --animate-marquee: marquee 100s linear infinite;
+}
+
+body {
+  background: var(--color-brand-cream);
+  color: var(--color-brand-nearBlack);
+  font-family: var(--font-sans);
+}
+
+/* Hide scrollbar for all browsers */
+*,
+*::before,
+*::after {
+  -ms-overflow-style: none !important;
+  scrollbar-width: none !important;
+}
+
+*::-webkit-scrollbar {
+  display: none !important;
+}
+
+/* Drawer slide-in animation */
+@keyframes slide-in-right {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+.animate-slide-in {
+  animation: slide-in-right 0.3s ease-out forwards;
+}
+
+/* Marquee animation */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+:root {
+  --radius: 0.625rem;
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.145 0 0);
+  --border: oklch(0.922 0 0);
+  --ring: oklch(0.708 0 0);
+  --admin-primary: #8E94F2;
+  /* Soft Periwinkle for light mode */
+}
+
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --border: oklch(1 0 0 / 10%);
+  --ring: oklch(0.556 0 0);
+  --admin-primary: #8E94F2;
+  /* iOS Dark Blue for dark mode */
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}

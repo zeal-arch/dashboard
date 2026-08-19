@@ -1,0 +1,50 @@
+[
+  {
+    "id": "386fed63-7734-4f46-88ae-2741d2924449",
+    "stage_id": "13d42b1e-7033-48c7-99bf-593cd8ef59cc",
+    "max_hours": 4,
+    "action": "notify",
+    "notify_role": "manager",
+    "created_at": "2026-03-29T09:22:49.622444+00:00"
+  },
+  {
+    "id": "7d8d46ec-795d-473b-a368-4c722d4d3a81",
+    "stage_id": "baf78f49-b287-4fc1-ac02-389af13c6a3e",
+    "max_hours": 24,
+    "action": "notify",
+    "notify_role": "manager",
+    "created_at": "2026-03-29T09:22:49.622444+00:00"
+  },
+  {
+    "id": "b003f4dc-a37a-4a9b-874d-b34239529b92",
+    "stage_id": "b588fc47-a19a-42a1-8650-7da2b6a13721",
+    "max_hours": 48,
+    "action": "flag",
+    "notify_role": "manager",
+    "created_at": "2026-03-29T09:22:49.622444+00:00"
+  },
+  {
+    "id": "ba1d59b1-294d-43e2-b145-6638fac64841",
+    "stage_id": "3cd7c1e2-2b70-4db5-b011-fd87a8ece3fb",
+    "max_hours": 72,
+    "action": "flag",
+    "notify_role": "manager",
+    "created_at": "2026-03-29T09:22:49.622444+00:00"
+  },
+  {
+    "id": "fee6bb03-bce1-4cce-9807-7eeaa9980c18",
+    "stage_id": "4f60956c-8639-45a1-be01-6f25cfbf0b99",
+    "max_hours": 168,
+    "action": "reassign",
+    "notify_role": "admin",
+    "created_at": "2026-03-29T09:22:49.622444+00:00"
+  },
+  {
+    "id": "babb6145-33b1-432b-8725-4d2b1d52fa90",
+    "stage_id": "e7ffd944-e976-4edd-ac1f-e4c6a0a04c0e",
+    "max_hours": 48,
+    "action": "flag",
+    "notify_role": "admin",
+    "created_at": "2026-03-29T09:22:49.622444+00:00"
+  }
+]

@@ -1,0 +1,41 @@
+[
+  {
+    "id": "c1a25757-7f41-4697-b2d6-ce16d02023c7",
+    "lead_id": "5e5be5b3-945e-4769-87d4-c19d5596c1a3",
+    "assigned_to": "552dd5fc-5f4c-4b96-9664-8d5e60b9a4ed",
+    "created_by": "552dd5fc-5f4c-4b96-9664-8d5e60b9a4ed",
+    "task_type": "follow_up",
+    "notes": "call him asap please",
+    "due_at": "2026-04-01T20:13:00+00:00",
+    "completed_at": null,
+    "status": "pending",
+    "escalation_level": 0,
+    "created_at": "2026-03-29T10:52:38.647305+00:00"
+  },
+  {
+    "id": "0801bd66-ab9c-4754-98e0-12424d6ad358",
+    "lead_id": "5e5be5b3-945e-4769-87d4-c19d5596c1a3",
+    "assigned_to": "552dd5fc-5f4c-4b96-9664-8d5e60b9a4ed",
+    "created_by": "552dd5fc-5f4c-4b96-9664-8d5e60b9a4ed",
+    "task_type": "call",
+    "notes": "call him asap ",
+    "due_at": "2026-04-01T16:12:00+00:00",
+    "completed_at": null,
+    "status": "pending",
+    "escalation_level": 0,
+    "created_at": "2026-03-29T10:53:25.670684+00:00"
+  },
+  {
+    "id": "bc0328c4-2c9b-46e3-8cfc-7c314b9ace57",
+    "lead_id": "0eaec857-95c4-402e-8e3e-200cc15f427a",
+    "assigned_to": "552dd5fc-5f4c-4b96-9664-8d5e60b9a4ed",
+    "created_by": "552dd5fc-5f4c-4b96-9664-8d5e60b9a4ed",
+    "task_type": "follow_up",
+    "notes": "",
+    "due_at": "2026-03-31T23:36:00+00:00",
+    "completed_at": null,
+    "status": "pending",
+    "escalation_level": 0,
+    "created_at": "2026-03-30T18:06:42.487246+00:00"
+  }
+]

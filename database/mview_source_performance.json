@@ -1,0 +1,23 @@
+[
+  {
+    "source": "google_ad",
+    "total_leads": 34,
+    "hot_count": 0,
+    "avg_score": 10,
+    "contactable": 34
+  },
+  {
+    "source": "facebook_ad",
+    "total_leads": 11,
+    "hot_count": 0,
+    "avg_score": 10,
+    "contactable": 11
+  },
+  {
+    "source": "organic",
+    "total_leads": 1696,
+    "hot_count": 0,
+    "avg_score": 10,
+    "contactable": 1694
+  }
+]

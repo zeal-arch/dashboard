@@ -1,0 +1,56 @@
+[
+  {
+    "id": "f5136abc-371d-482a-894e-de5afe014568",
+    "question": "Do I need IELTS or TOEFL to study abroad?",
+    "answer": "Most universities require an English proficiency test. We'll advise you on which test suits your target universities best.",
+    "sort_order": 2,
+    "is_active": true,
+    "created_at": "2026-03-23T10:18:55.000215+00:00",
+    "updated_at": "2026-03-23T10:18:55.000215+00:00"
+  },
+  {
+    "id": "3d3b4bcc-9ce4-400e-b20c-951669fa152c",
+    "question": "How much does it cost to study in the UK or Canada?",
+    "answer": "Costs vary by country and university. We provide a full cost breakdown including tuition, living expenses, and scholarship options.",
+    "sort_order": 3,
+    "is_active": true,
+    "created_at": "2026-03-23T10:18:55.000215+00:00",
+    "updated_at": "2026-03-23T10:18:55.000215+00:00"
+  },
+  {
+    "id": "8ce14f74-df66-4881-99c5-d5f8718f9752",
+    "question": "Can RAYVOY help with scholarship applications?",
+    "answer": "Absolutely. We identify scholarships you're eligible for and guide you through the full application process.",
+    "sort_order": 4,
+    "is_active": true,
+    "created_at": "2026-03-23T10:18:55.000215+00:00",
+    "updated_at": "2026-03-23T10:18:55.000215+00:00"
+  },
+  {
+    "id": "b116b0af-f0d1-4c71-8dd3-a2fe1ec1a958",
+    "question": "How long does the visa process take?",
+    "answer": "Typically 6–12 months depending on the country. We begin visa prep early to avoid last-minute stress.",
+    "sort_order": 5,
+    "is_active": true,
+    "created_at": "2026-03-23T10:18:55.000215+00:00",
+    "updated_at": "2026-03-23T10:18:55.000215+00:00"
+  },
+  {
+    "id": "51d0397b-c027-4088-9890-59c1a6374442",
+    "question": "Is your counselling service really free?",
+    "answer": "Yes — your initial profile evaluation and counselling session are completely free with no obligations.",
+    "sort_order": 6,
+    "is_active": true,
+    "created_at": "2026-03-23T10:18:55.000215+00:00",
+    "updated_at": "2026-03-23T10:18:55.000215+00:00"
+  },
+  {
+    "id": "490d783a-8e9f-48a7-adc8-f2204613eefb",
+    "question": "When should I start my study abroad application?",
+    "answer": "Ideally 12–18 months before your intended start date to ensure enough time for tests, applications, and visa processing.",
+    "sort_order": 1,
+    "is_active": true,
+    "created_at": "2026-03-23T10:18:55.000215+00:00",
+    "updated_at": "2026-03-29T18:18:25.562096+00:00"
+  }
+]

@@ -1,0 +1,54 @@
+[
+  {
+    "id": "552dd5fc-5f4c-4b96-9664-8d5e60b9a4ed",
+    "email": "it.support@rayvoy.com",
+    "full_name": "ADMINISTRATOR",
+    "notes": "",
+    "is_active": false,
+    "added_at": "2026-03-16T08:16:14.9767+00:00",
+    "added_by": null,
+    "role": "counselor",
+    "max_leads": 200,
+    "skills": [],
+    "last_assigned_at": null
+  },
+  {
+    "id": "cb033b52-27ed-4c38-8dc7-d9acc091eeb0",
+    "email": "admission.support@rayvoy.com",
+    "full_name": "Admission Support",
+    "notes": "Founder",
+    "is_active": false,
+    "added_at": "2026-03-17T17:54:56.304694+00:00",
+    "added_by": "Zealous",
+    "role": "counselor",
+    "max_leads": 200,
+    "skills": [],
+    "last_assigned_at": null
+  },
+  {
+    "id": "f4f6d690-74ff-4446-9189-1483dfb0194d",
+    "email": "prathikshap1998@gmail.com",
+    "full_name": "Prathiksha",
+    "notes": "Co-founder",
+    "is_active": true,
+    "added_at": "2026-03-26T19:46:08.158426+00:00",
+    "added_by": "552dd5fc-5f4c-4b96-9664-8d5e60b9a4ed",
+    "role": "counselor",
+    "max_leads": 200,
+    "skills": [],
+    "last_assigned_at": null
+  },
+  {
+    "id": "49a4747a-1d81-4dc2-b029-cc0d7a8ec5cd",
+    "email": "zealoussebastian464@gmail.com",
+    "full_name": "ADMINISTRATOR",
+    "notes": "Google Auth",
+    "is_active": true,
+    "added_at": "2026-04-03T06:21:38.208095+00:00",
+    "added_by": null,
+    "role": "counselor",
+    "max_leads": 200,
+    "skills": [],
+    "last_assigned_at": null
+  }
+]

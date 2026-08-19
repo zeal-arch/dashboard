@@ -1,0 +1,20 @@
+[
+  {
+    "id": "c5c94baf-e3bc-479f-b3b1-b7f1554c19dd",
+    "user_id": "f4f6d690-74ff-4446-9189-1483dfb0194d",
+    "email": "prathikshap1998@gmail.com",
+    "provider": "google",
+    "first_login_at": "2026-03-27T10:05:28.011585+00:00",
+    "last_seen_at": "2026-03-30T17:33:40.982695+00:00",
+    "login_count": 11
+  },
+  {
+    "id": "7ffa1723-22f0-4bd9-8775-2d5121671f02",
+    "user_id": "49a4747a-1d81-4dc2-b029-cc0d7a8ec5cd",
+    "email": "zealoussebastian464@gmail.com",
+    "provider": "email",
+    "first_login_at": "2026-04-02T18:52:04.800422+00:00",
+    "last_seen_at": "2026-04-09T10:18:28.450631+00:00",
+    "login_count": 72
+  }
+]
