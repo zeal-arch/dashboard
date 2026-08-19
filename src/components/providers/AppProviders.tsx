@@ -2,7 +2,7 @@
 
 import { ReactNode } from "react";
 import { ReactLenis } from "lenis/react";
-import { LayoutGroup } from "motion/react";
+import { LayoutGroup } from "framer-motion";
 
 interface AppProvidersProps {
   children: ReactNode;

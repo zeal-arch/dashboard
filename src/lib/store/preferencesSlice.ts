@@ -1,12 +1,13 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
-export type Category = "technology" | "sports" | "finance" | "entertainment" | "health" | "science";
+export type Category = "technology" | "sports" | "finance" | "entertainment" | "health" | "science" | "business" | "general" | "music" | "food" | "gaming" | "anime" | "social";
 
 export interface PreferencesState {
   categories: Category[];
   darkMode: boolean;
   searchQuery: string;
   contentOrder: string[]; // drag-and-drop order of content types
+  interestScores: Record<string, number>;
 }
 
 const initialState: PreferencesState = {
@@ -14,6 +15,7 @@ const initialState: PreferencesState = {
   darkMode: false,
   searchQuery: "",
   contentOrder: ["news", "movies", "social"],
+  interestScores: {},
 };
 
 const preferencesSlice = createSlice({
@@ -40,8 +42,13 @@ const preferencesSlice = createSlice({
     setContentOrder(state, action: PayloadAction<string[]>) {
       state.contentOrder = action.payload;
     },
+    recordInteraction(state, action: PayloadAction<{ tag: string; weight: number }>) {
+      const { tag, weight } = action.payload;
+      if (!tag) return;
+      state.interestScores[tag] = (state.interestScores[tag] || 0) + weight;
+    }
   },
 });
 
-export const { toggleCategory, setCategories, setDarkMode, setSearchQuery, setContentOrder } = preferencesSlice.actions;
+export const { toggleCategory, setCategories, setDarkMode, setSearchQuery, setContentOrder, recordInteraction } = preferencesSlice.actions;
 export default preferencesSlice.reducer;

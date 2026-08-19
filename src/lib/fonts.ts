@@ -5,6 +5,7 @@ export const inter = Inter({
   weight: ["400", "500", "600", "700", "800"],
   variable: "--font-inter",
   display: "swap",
+  preload: false,
 });
 
 export const playfair = Playfair_Display({
@@ -12,6 +13,7 @@ export const playfair = Playfair_Display({
   weight: ["400", "500", "600", "700", "800"],
   variable: "--font-playfair",
   display: "swap",
+  preload: false,
 });
 
 export const mulish = Mulish({
@@ -19,4 +21,5 @@ export const mulish = Mulish({
   weight: ["200", "300", "400", "500", "600", "700", "800", "900", "1000"],
   variable: "--font-mulish",
   display: "swap",
+  preload: false,
 });

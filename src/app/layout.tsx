@@ -1,19 +1,21 @@
 import "@/styles/globals.css";
-import { defaultMetadata } from "@/lib/metadata";
 import { inter, mulish, playfair } from "@/lib/fonts";
-import { Analytics } from "@vercel/analytics/react";
-import { SpeedInsights } from "@vercel/speed-insights/next";
+import NextAuthProvider from "@/components/NextAuthProvider";
+import { ThemeProvider } from "next-themes";
 
-export const metadata = defaultMetadata;
+export const metadata = {
+  title: "Personalized Content Dashboard",
+  description: "A customized dashboard experience",
+};
 
 /**
  * Root layout — bare HTML shell only.
  * 
  * Each route group provides its own contextual layout:
- *   (public)/layout.tsx  → Navbar + Footer + AppProviders (smooth scroll, etc.)
- *   auth/layout.tsx      → Clean standalone pages with Sonner toaster
+ *   auth/layout.tsx              → Clean standalone pages with Sonner toaster
  *   admin/(dashboard)/layout.tsx → Sidebar + Header + admin providers
  */
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -26,9 +28,11 @@ export default function RootLayout({
         className={`${inter.variable} ${mulish.variable} ${playfair.variable} ${inter.className} antialiased`}
         suppressHydrationWarning
       >
-        {children}
-        <Analytics />
-        <SpeedInsights />
+        <NextAuthProvider>
+          <ThemeProvider defaultTheme="light" attribute="class" disableTransitionOnChange>
+            {children}
+          </ThemeProvider>
+        </NextAuthProvider>
       </body>
     </html>
   );

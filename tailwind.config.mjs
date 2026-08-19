@@ -25,14 +25,6 @@ const config = {
         foreground: "oklch(var(--foreground))",
 
         // ===== PUBLIC SITE COLORS =====
-        // Mizo cultural organization branding
-        rayvoy: {
-          primary: "#8E94F2",    // Deep red
-          secondary: "#FFD700",  // Golden yellow
-          accent: "#228B22",     // Forest green
-          neutral: "#2F4F4F",    // Dark slate
-          light: "#F5F5DC",      // Beige
-        },
 
         // General purpose colors for public pages
         blue: {

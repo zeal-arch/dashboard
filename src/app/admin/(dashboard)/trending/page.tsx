@@ -10,9 +10,9 @@ import { TrendingUp } from "lucide-react";
 import { motion } from "framer-motion";
 
 const RANK_STYLES = [
-  "bg-yellow-400 text-white",   // 🥇
-  "bg-gray-300 text-gray-800",  // 🥈
-  "bg-orange-400 text-white",   // 🥉
+  "bg-yellow-400 text-white",
+  "bg-gray-300 text-gray-800",
+  "bg-orange-400 text-white",
   "bg-gray-100 text-gray-500 dark:bg-dark-3 dark:text-gray-400",
   "bg-gray-100 text-gray-500 dark:bg-dark-3 dark:text-gray-400",
   "bg-gray-100 text-gray-500 dark:bg-dark-3 dark:text-gray-400",
@@ -35,7 +35,7 @@ export default function TrendingPage() {
         <TrendingUp className="h-6 w-6" />
         <div>
           <h2 className="text-base font-bold">What&apos;s Trending</h2>
-          <p className="text-xs text-white/75">Top content across news, movies, and social media right now</p>
+          <p className="text-xs text-white/75">Top trending topics curated across all available APIs right now</p>
         </div>
       </div>
 

@@ -9,16 +9,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 export default function FavoritesPage() {
   const dispatch = useAppDispatch();
-  const favoriteIds = useAppSelector((s) => s.favorites.ids);
-  const allItems = useAppSelector((s) => s.content.items);
-  const trendingItems = useAppSelector((s) => s.content.trending);
-
-  // Build a unified map of all known items across both slices
-  const allKnownItems = [...allItems, ...trendingItems];
-  const uniqueMap = new Map(allKnownItems.map((i) => [i.id, i]));
-  const favoriteItems = favoriteIds
-    .map((id) => uniqueMap.get(id))
-    .filter((i): i is NonNullable<typeof i> => Boolean(i));
+  const favoriteItems = useAppSelector((s) => s.favorites.items || []);
 
   return (
     <>
@@ -47,11 +38,11 @@ export default function FavoritesPage() {
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            className="flex flex-col items-center justify-center rounded-xl bg-white py-24 dark:bg-gray-dark"
+            className="flex flex-col items-center justify-center rounded-2xl bg-white/40 py-24 backdrop-blur-sm dark:bg-white/5"
           >
-            <Heart className="h-12 w-12 text-gray-200 dark:text-gray-700" />
-            <p className="mt-3 text-sm font-medium text-gray-500">No favorites yet</p>
-            <p className="mt-1 text-xs text-gray-400">
+            <Heart className="h-12 w-12 text-gray-300 dark:text-gray-600" />
+            <p className="mt-3 text-sm font-medium text-gray-600 dark:text-gray-300">No favorites yet</p>
+            <p className="mt-1 text-xs text-gray-400 dark:text-gray-500">
               Tap the ❤ on any card in your feed to save it here
             </p>
           </motion.div>
@@ -63,7 +54,7 @@ export default function FavoritesPage() {
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.9 }}
-                transition={{ delay: idx * 0.05 }}
+                transition={{ delay: idx * 0.04 }}
               >
                 <ContentCard item={item} />
               </motion.div>
