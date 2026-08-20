@@ -259,6 +259,12 @@ const contentSlice = createSlice({
     reorderItems(state, action: PayloadAction<ContentItem[]>) {
       state.items = action.payload;
     },
+    addRealtimeItem(state, action: PayloadAction<ContentItem>) {
+      // Avoid duplicates
+      if (state.items.some(i => i.id === action.payload.id)) return;
+      state.items = [action.payload, ...state.items];
+      state.allFetchedItems = [action.payload, ...state.allFetchedItems];
+    },
   },
   extraReducers: (builder) => {
     builder
@@ -290,5 +296,5 @@ const contentSlice = createSlice({
   },
 });
 
-export const { resetContent, reorderItems } = contentSlice.actions;
+export const { resetContent, reorderItems, addRealtimeItem } = contentSlice.actions;
 export default contentSlice.reducer;

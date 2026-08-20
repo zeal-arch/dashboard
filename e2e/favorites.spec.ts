@@ -34,8 +34,8 @@ test.describe('Favorites Flow', () => {
     await page.locator('a[href="/admin/favorites"]').click();
     await page.waitForURL('/admin/favorites');
 
-    // Verify "1 saved item" text is visible
-    await expect(page.locator('text=1 saved item')).toBeVisible();
+    // Verify "1 favorites" text is visible
+    await expect(page.locator('text=1 favorites')).toBeVisible();
 
     // Verify the card is visible on the favorites page
     const cardInFavorites = page.locator('button[title="Remove from favorites"]').first();
@@ -45,7 +45,7 @@ test.describe('Favorites Flow', () => {
     await page.reload();
 
     // Wait for the rehydrated state to load
-    await expect(page.locator('text=1 saved item')).toBeVisible();
+    await expect(page.locator('text=1 favorites')).toBeVisible();
     await expect(cardInFavorites).toBeVisible();
 
     // Unfavorite the item

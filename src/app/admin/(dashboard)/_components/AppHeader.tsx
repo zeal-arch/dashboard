@@ -10,6 +10,7 @@ import { cn } from "@/lib/utils";
 import { useDebounce } from "@/hooks";
 import { useAppDispatch, useAppSelector } from "@/lib/store/hooks";
 import { setSearchQuery } from "@/lib/store/preferencesSlice";
+import { useTranslation } from "react-i18next";
 
 export function AppHeader() {
   const { data: session } = useSession();
@@ -21,6 +22,7 @@ export function AppHeader() {
   const [prevGlobalQuery, setPrevGlobalQuery] = useState(globalQuery);
   const [localQuery, setLocalQuery] = useState(globalQuery);
   const debouncedQuery = useDebounce(localQuery, 400);
+  const { t, i18n } = useTranslation();
 
   if (!isSearchPage && globalQuery !== prevGlobalQuery) {
     setPrevGlobalQuery(globalQuery);
@@ -68,6 +70,11 @@ export function AppHeader() {
       ]
     );
 
+  const toggleLanguage = () => {
+    const nextLang = i18n.language === "en" ? "es" : "en";
+    i18n.changeLanguage(nextLang);
+  };
+
   // If the user is currently on the Search page, we can hide the mini-search in the header
   // to avoid confusing duplicate search bars.
   
@@ -84,7 +91,7 @@ export function AppHeader() {
                 type="text"
                 value={localQuery}
                 onChange={(e) => setLocalQuery(e.target.value)}
-                placeholder="Search everything..."
+                placeholder={t("search.placeholder")}
                 className="w-full bg-transparent px-3 text-sm text-gray-900 dark:text-white placeholder-gray-500 outline-none"
               />
             </div>
@@ -94,9 +101,21 @@ export function AppHeader() {
 
       {/* User Settings & Account Info (Right) */}
       <div className="flex items-center gap-4">
+        {/* Language switch button */}
+        <button
+          onClick={toggleLanguage}
+          title="Toggle Language / Alternar Idioma"
+          className={cn(
+            getGlassButtonClass(false),
+            "text-[10px] font-bold font-satoshi flex items-center justify-center tracking-wider text-gray-700 dark:text-gray-200"
+          )}
+        >
+          {i18n.language === "es" ? "ES" : "EN"}
+        </button>
+
         <Link
           href="/admin/preferences"
-          title="User Settings"
+          title={t("preferences.title")}
           className={getGlassButtonClass(pathname === "/admin/preferences")}
         >
           <Settings className="h-4 w-4 text-gray-600 dark:text-gray-300 transition-transform duration-300 group-hover:rotate-45" />

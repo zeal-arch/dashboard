@@ -9,6 +9,7 @@ import { AppSidebar } from "./_components/AppSidebar";
 import { AppHeader } from "./_components/AppHeader";
 
 import { AuthGuard } from "@/admin/components/AuthGuard";
+import { PageTransition } from "./_components/PageTransition";
 
 export const metadata: Metadata = {
   title: {
@@ -41,7 +42,7 @@ export default function AdminLayout({ children }: PropsWithChildren) {
           <AppHeader />
           <main className="flex h-full w-full flex-col overflow-y-auto rounded-[2.5rem] border-2 border-white/80 bg-white/50 px-4 py-4 shadow-[0_8px_40px_rgb(142,148,242,0.15)] backdrop-blur-2xl custom-scrollbar dark:border-white/10 dark:bg-black/20 sm:px-6 sm:py-5 lg:px-8 lg:py-6">
             <div className="w-full">
-              {children}
+              <PageTransition>{children}</PageTransition>
             </div>
           </main>
         </div>

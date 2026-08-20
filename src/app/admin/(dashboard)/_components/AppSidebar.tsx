@@ -8,12 +8,13 @@ import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
 import { useAppDispatch } from "@/lib/store/hooks";
 import { setDarkMode } from "@/lib/store/preferencesSlice";
+import { useTranslation } from "react-i18next";
 
 const NAV_LINKS = [
-  { href: "/admin/feed", icon: Compass, label: "Explore" },
-  { href: "/admin/search", icon: Search, label: "Search" },
-  { href: "/admin/trending", icon: TrendingUp, label: "Trending" },
-  { href: "/admin/favorites", icon: Heart, label: "Favorites" },
+  { href: "/admin/feed", icon: Compass, labelKey: "nav.explore" },
+  { href: "/admin/search", icon: Search, labelKey: "nav.search" },
+  { href: "/admin/trending", icon: TrendingUp, labelKey: "nav.trending" },
+  { href: "/admin/favorites", icon: Heart, labelKey: "nav.favorites" },
 ];
 
 export function AppSidebar() {
@@ -21,6 +22,7 @@ export function AppSidebar() {
   const { setTheme, resolvedTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
   const dispatch = useAppDispatch();
+  const { t } = useTranslation();
 
   useEffect(() => {
     setTimeout(() => setMounted(true), 0);
@@ -92,7 +94,7 @@ export function AppSidebar() {
             <Link
               key={link.href}
               href={link.href}
-              title={link.label}
+              title={t(link.labelKey)}
               className={getGlassButtonClass(isActive)}
             >
               <Icon className="h-5 w-5 transition-transform duration-300 group-hover:scale-110" />
@@ -112,7 +114,7 @@ export function AppSidebar() {
               setTheme(newTheme);
               dispatch(setDarkMode(newTheme === "dark"));
             }}
-            title="Toggle Theme"
+            title={t("preferences.theme")}
             className={getGlassButtonClass(false)}
           >
             {resolvedTheme === "light" ? (

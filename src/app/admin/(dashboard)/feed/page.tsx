@@ -2,10 +2,11 @@
 
 import { useEffect, useCallback, useRef } from "react";
 import { useAppDispatch, useAppSelector } from "@/lib/store/hooks";
-import { fetchContent, resetContent, reorderItems, ContentItem } from "@/lib/store/contentSlice";
+import { fetchContent, resetContent, reorderItems, addRealtimeItem, ContentItem } from "@/lib/store/contentSlice";
 import { toggleCategory, Category } from "@/lib/store/preferencesSlice";
 import { ContentCard } from "@/components/ui/ContentCard";
 import { AnimatePresence, motion } from "framer-motion";
+import { toast } from "sonner";
 import {
   DndContext,
   closestCenter,
@@ -23,6 +24,7 @@ import {
 import { CSS } from "@dnd-kit/utilities";
 import { GripVertical, Loader2, RefreshCw } from "lucide-react";
 import { Skeleton } from "@/components/ui/skeleton";
+import { useTranslation } from "react-i18next";
 
 const ALL_CATEGORIES: Category[] = [
   "technology",
@@ -70,6 +72,7 @@ export default function FeedPage() {
   const selectedCategories = useAppSelector((s) => s.preferences.categories);
   const favoriteCount = useAppSelector((s) => s.favorites?.items?.length || 0);
   const isPersonalized = favoriteCount > 0;
+  const { t } = useTranslation();
 
   const observerRef = useRef<IntersectionObserver | null>(null);
   const bottomRef = useRef<HTMLDivElement | null>(null);
@@ -97,6 +100,46 @@ export default function FeedPage() {
       dispatch(fetchContent({ categories: selectedCategories, page: 0, search: "", forceRefresh: true }));
     }
   }, [favoriteCount, recommendedItems.length, selectedCategories, loading, dispatch]);
+
+  // Server-Sent Events (SSE) connection for real-time posts
+  useEffect(() => {
+    const eventSource = new EventSource("/api/realtime");
+
+    eventSource.onmessage = (event) => {
+      try {
+        const item = JSON.parse(event.data);
+        if (item.connected) {
+          console.log("Real-time feed connected successfully");
+          return;
+        }
+
+        // Add real-time item to Redux store
+        dispatch(addRealtimeItem(item));
+
+        // Show a premium toast notification
+        toast.info(t("feed.newAlert"), {
+          description: item.title,
+          duration: 6000,
+          action: {
+            label: "View",
+            onClick: () => {
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }
+          }
+        });
+      } catch (err) {
+        console.error("Failed to parse real-time event:", err);
+      }
+    };
+
+    eventSource.onerror = (err) => {
+      console.error("EventSource connection error:", err);
+    };
+
+    return () => {
+      eventSource.close();
+    };
+  }, [dispatch, t]);
 
   // Infinite scroll observer
   useEffect(() => {
@@ -171,17 +214,8 @@ export default function FeedPage() {
         <div className="mb-10">
           <div className="mb-4 flex items-end gap-3">
             <h2 className="text-lg font-bold tracking-tight text-gray-900 dark:text-white flex items-center gap-2">
-              {isPersonalized ? (
-                <>✨ Recommended for You</>
-              ) : (
-                <>🎬 Popular Picks</>
-              )}
+              {t("feed.recommendationsTitle")}
             </h2>
-            {!isPersonalized && (
-              <p className="mb-0.5 text-xs text-gray-400 dark:text-gray-500">
-                ❤️ Like cards to get personalized recommendations
-              </p>
-            )}
           </div>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 items-start">
             {recommendedItems.map((item: ContentItem) => (
@@ -195,7 +229,7 @@ export default function FeedPage() {
       {(generalItems.length > 0 || loading) && (
         <div className="mb-4">
           <h2 className="text-lg font-bold tracking-tight text-gray-900 dark:text-white flex items-center gap-2">
-            Your Feed
+            {t("feed.title")}
           </h2>
         </div>
       )}

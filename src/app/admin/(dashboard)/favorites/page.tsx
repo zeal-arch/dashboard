@@ -6,20 +6,22 @@ import { ContentCard } from "@/components/ui/ContentCard";
 import Breadcrumb from "@/components/ui/Breadcrumbs/Breadcrumb";
 import { Heart, Trash2 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 export default function FavoritesPage() {
   const dispatch = useAppDispatch();
   const favoriteItems = useAppSelector((s) => s.favorites?.items || []);
+  const { t } = useTranslation();
 
   return (
     <>
-      <Breadcrumb pageName="Favorites" />
+      <Breadcrumb pageName={t("nav.favorites")} />
 
       <div className="mb-6 flex items-center justify-between">
         <div className="flex items-center gap-2">
           <Heart className="h-5 w-5 fill-red-400 text-red-400" />
           <h2 className="text-sm font-semibold text-gray-900 dark:text-white">
-            {favoriteItems.length} saved item{favoriteItems.length !== 1 ? "s" : ""}
+            {favoriteItems.length} {t("nav.favorites").toLowerCase()}
           </h2>
         </div>
         {favoriteItems.length > 0 && (
@@ -41,9 +43,9 @@ export default function FavoritesPage() {
             className="flex flex-col items-center justify-center rounded-2xl bg-white/40 py-24 backdrop-blur-sm dark:bg-white/5"
           >
             <Heart className="h-12 w-12 text-gray-300 dark:text-gray-600" />
-            <p className="mt-3 text-sm font-medium text-gray-600 dark:text-gray-300">No favorites yet</p>
+            <p className="mt-3 text-sm font-medium text-gray-600 dark:text-gray-300">{t("favorites.empty")}</p>
             <p className="mt-1 text-xs text-gray-400 dark:text-gray-500">
-              Tap the ❤ on any card in your feed to save it here
+              {t("favorites.placeholder")}
             </p>
           </motion.div>
         ) : (
