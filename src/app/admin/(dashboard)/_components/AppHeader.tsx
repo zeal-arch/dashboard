@@ -15,23 +15,27 @@ export function AppHeader() {
   const { data: session } = useSession();
   const router = useRouter();
   const pathname = usePathname();
+  const isSearchPage = pathname === "/admin/search";
   const dispatch = useAppDispatch();
   const globalQuery = useAppSelector((s) => s.preferences.searchQuery);
+  const [prevGlobalQuery, setPrevGlobalQuery] = useState(globalQuery);
   const [localQuery, setLocalQuery] = useState(globalQuery);
   const debouncedQuery = useDebounce(localQuery, 400);
 
-  useEffect(() => {
+  if (!isSearchPage && globalQuery !== prevGlobalQuery) {
+    setPrevGlobalQuery(globalQuery);
     setLocalQuery(globalQuery);
-  }, [globalQuery]);
+  }
 
   useEffect(() => {
+    if (isSearchPage) return; // Disable header debounced dispatch when already on the search page
     if (debouncedQuery !== globalQuery) {
       dispatch(setSearchQuery(debouncedQuery));
       if (debouncedQuery.trim() !== "" && pathname !== "/admin/search") {
         router.push("/admin/search");
       }
     }
-  }, [debouncedQuery, globalQuery, dispatch, pathname, router]);
+  }, [debouncedQuery, globalQuery, dispatch, pathname, router, isSearchPage]);
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
@@ -66,8 +70,7 @@ export function AppHeader() {
 
   // If the user is currently on the Search page, we can hide the mini-search in the header
   // to avoid confusing duplicate search bars.
-  const isSearchPage = pathname === "/admin/search";
-
+  
   return (
     <header className="mb-2 flex w-full items-center justify-between gap-4 px-2 py-1 sm:px-4">
 

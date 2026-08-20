@@ -9,6 +9,17 @@ import type { ContentItem } from "@/lib/store/contentSlice";
 import { useAppSelector, useAppDispatch } from "@/lib/store/hooks";
 import { setSearchQuery } from "@/lib/store/preferencesSlice";
 
+import { fetchNews } from "@/lib/services/newsApi";
+import { fetchTrendingMovies } from "@/lib/services/tmdbApi";
+import { fetchRedditPosts } from "@/lib/services/redditApi";
+import { fetchTrendingMusic } from "@/lib/services/saavnApi";
+import { fetchTrendingSports } from "@/lib/services/footballApi";
+import { fetchTrendingForum } from "@/lib/services/fourchanApi";
+import { fetchTrendingScience } from "@/lib/services/scienceApi";
+import { fetchTrendingFood } from "@/lib/services/foodApi";
+import { fetchTrendingGaming } from "@/lib/services/gamingApi";
+import { fetchTrendingAnime } from "@/lib/services/animeApi";
+
 // ── Isolated search state — does NOT touch the shared feed Redux slice ─────────
 // Fetches from all same APIs but filters locally by search query.
 
@@ -20,49 +31,58 @@ const QUICK_TAGS = [
 
 const PAGE_SIZE = 20;
 
+const timeout = (ms: number) => new Promise((_, reject) => setTimeout(() => reject(new Error("Timeout")), ms));
+
+const fetchWithTimeout = async <T,>(promise: Promise<T>, ms: number): Promise<T> => {
+  return Promise.race([promise, timeout(ms)]) as Promise<T>;
+};
+
 async function searchContent(query: string, page: number): Promise<{ items: ContentItem[]; hasMore: boolean }> {
   if (!query.trim()) return { items: [], hasMore: false };
 
-  // Fetch news results from the server-side API — the cheapest targeted search
-  const responses = await Promise.allSettled([
-    fetch(`/api/news?category=general&search=${encodeURIComponent(query)}`),
-    fetch(`/api/movies?search=${encodeURIComponent(query)}`),
-    fetch(`/api/reddit?search=${encodeURIComponent(query)}`),
-    fetch(`/api/music`),
-    fetch(`/api/gaming`),
-    fetch(`/api/science`),
-    fetch(`/api/food`),
-    fetch(`/api/anime`),
-    fetch(`/api/sports`),
-    fetch(`/api/forum`),
-  ]);
+  try {
+    const responses = await Promise.allSettled([
+      fetchWithTimeout(fetchNews(["general"], query), 5000),
+      fetchWithTimeout(fetchTrendingMovies(), 5000),
+      fetchWithTimeout(fetchRedditPosts(), 5000),
+      fetchWithTimeout(fetchTrendingMusic(), 5000),
+      fetchWithTimeout(fetchTrendingSports(), 5000),
+      fetchWithTimeout(fetchTrendingForum(), 5000),
+      fetchWithTimeout(fetchTrendingScience(), 5000),
+      fetchWithTimeout(fetchTrendingFood(), 5000),
+      fetchWithTimeout(fetchTrendingGaming(), 5000),
+      fetchWithTimeout(fetchTrendingAnime(), 5000),
+    ]);
 
-  const items: ContentItem[] = [];
+    const items: ContentItem[] = [];
 
-  for (const res of responses) {
-    if (res.status !== "fulfilled" || !res.value.ok) continue;
-    const json = await res.value.json();
-    // Each route returns an array under different keys
-    const arr: ContentItem[] = json.articles ?? json.movies ?? json.posts ?? [];
-    if (Array.isArray(arr)) items.push(...arr);
+    for (const res of responses) {
+      if (res.status === "fulfilled" && Array.isArray(res.value)) {
+        items.push(...res.value);
+      }
+    }
+
+    // Client-side text filter across ALL returned items
+    const q = query.toLowerCase();
+    const filtered = items.filter((i) => {
+      const titleStr = String(i.title || "").toLowerCase();
+      const descStr = String(i.description || "").toLowerCase();
+      const sourceStr = typeof i.source === "string" 
+        ? i.source.toLowerCase() 
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        : String((i.source as any)?.name || "").toLowerCase();
+      
+      return titleStr.includes(q) || descStr.includes(q) || sourceStr.includes(q);
+    });
+
+    const start = page * PAGE_SIZE;
+    const slice = filtered.slice(start, start + PAGE_SIZE);
+    return { items: slice, hasMore: filtered.length > start + PAGE_SIZE };
+  } catch (err) {
+    // eslint-disable-next-line no-console
+    console.error("searchContent failed:", err);
+    return { items: [], hasMore: false };
   }
-
-  // Client-side text filter across ALL returned items
-  const q = query.toLowerCase();
-  const filtered = items.filter((i) => {
-    const titleStr = String(i.title || "").toLowerCase();
-    const descStr = String(i.description || "").toLowerCase();
-    const sourceStr = typeof i.source === "string" 
-      ? i.source.toLowerCase() 
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      : String((i.source as any)?.name || "").toLowerCase();
-    
-    return titleStr.includes(q) || descStr.includes(q) || sourceStr.includes(q);
-  });
-
-  const start = page * PAGE_SIZE;
-  const slice = filtered.slice(start, start + PAGE_SIZE);
-  return { items: slice, hasMore: filtered.length > start + PAGE_SIZE };
 }
 
 export default function SearchPage() {
@@ -97,11 +117,19 @@ export default function SearchPage() {
       setItems([]);
       setPage(0);
     });
-    searchContent(debouncedQuery, 0).then(({ items: next, hasMore: more }) => {
-      setItems(next);
-      setHasMore(more);
-      setLoading(false);
-    });
+    searchContent(debouncedQuery, 0)
+      .then(({ items: next, hasMore: more }) => {
+        setItems(next);
+        setHasMore(more);
+        setLoading(false);
+      })
+      .catch((err) => {
+        // eslint-disable-next-line no-console
+        console.error("Search failed:", err);
+        setItems([]);
+        setHasMore(false);
+        setLoading(false);
+      });
   }, [debouncedQuery]);
 
   // Load next page
@@ -110,11 +138,17 @@ export default function SearchPage() {
     const nextPage = page + 1;
     setPage(nextPage);
     setLoading(true);
-    searchContent(debouncedQuery, nextPage).then(({ items: next, hasMore: more }) => {
-      setItems((prev) => [...prev, ...next]);
-      setHasMore(more);
-      setLoading(false);
-    });
+    searchContent(debouncedQuery, nextPage)
+      .then(({ items: next, hasMore: more }) => {
+        setItems((prev) => [...prev, ...next]);
+        setHasMore(more);
+        setLoading(false);
+      })
+      .catch((err) => {
+        // eslint-disable-next-line no-console
+        console.error("Load more failed:", err);
+        setLoading(false);
+      });
   }, [loading, hasMore, page, debouncedQuery]);
 
   // Infinite scroll

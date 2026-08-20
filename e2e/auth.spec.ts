@@ -25,8 +25,7 @@ test.describe('Authentication Flow', () => {
     await page.click('button[type="submit"]');
 
     // Wait for the error message
-    const errorMessage = await page.locator('text=Invalid credentials').isVisible();
-    expect(errorMessage).toBeTruthy();
+    await expect(page.locator('text=Invalid email or password')).toBeVisible({ timeout: 10000 });
     expect(page.url()).toContain('/auth/login');
   });
 });

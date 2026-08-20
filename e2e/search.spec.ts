@@ -12,21 +12,34 @@ test.describe('Search Functionality', () => {
   });
 
   test('should search for content and display results', async ({ page }) => {
+    test.setTimeout(60000);
+    
+    // Capture browser console logs and errors
+    page.on('console', msg => {
+      // eslint-disable-next-line no-console
+      console.log(`[browser console] ${msg.type()}: ${msg.text()}`);
+    });
+    page.on('pageerror', err => {
+      // eslint-disable-next-line no-console
+      console.log(`[browser error] ${err.stack || err.message}`);
+    });
+
     await page.goto('/admin/search');
 
     // Find the search input
-    const searchInput = page.locator('input[placeholder="Search for movies, news, or posts..."]');
+    const searchInput = page.locator('input[placeholder="Find Movies, News, Social Posts..."]');
     await expect(searchInput).toBeVisible();
 
     // Type a query
     await searchInput.fill('inception');
 
-    // Wait for debounce and network request (content should appear)
-    // We can wait for the loading skeleton to disappear, or for some content to be visible
-    await page.waitForTimeout(1000); // Wait for debounce
+    // Wait for the asynchronous search requests to complete and update the UI
+    await expect(
+      page.locator('text=loaded').or(page.locator('text=No results found'))
+    ).toBeVisible({ timeout: 45000 });
 
-    // Verify there are content cards or "No content found" message
-    const hasResults = await page.locator('text=Inception').isVisible() || await page.locator('text=No content found').isVisible() || await page.locator('.grid > div').count() > 0;
+    // Verify there are content cards or "No results found" message
+    const hasResults = await page.locator('text=No results found').isVisible() || await page.locator('.grid > div').count() > 0;
     
     expect(hasResults).toBeTruthy();
   });
