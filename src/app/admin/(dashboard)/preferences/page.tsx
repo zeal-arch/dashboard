@@ -75,7 +75,7 @@ export default function PreferencesPage() {
 
   return (
     <>
-      <Breadcrumb pageName="Preferences" />
+      <Breadcrumb pageName={t("nav.preferences", "Preferences")} />
 
       <div className="mx-auto max-w-4xl space-y-6">
         {/* Top Header Card */}
@@ -85,9 +85,11 @@ export default function PreferencesPage() {
               <Settings className="h-6 w-6" />
             </div>
             <div>
-              <h2 className="text-base font-bold text-gray-900 dark:text-white">Content & System Preferences</h2>
+              <h2 className="text-base font-bold text-gray-900 dark:text-white">
+                {t("preferences.title", "Content & System Preferences")}
+              </h2>
               <p className="text-xs text-gray-500 dark:text-gray-400">
-                Customise your feed categories, AI recommendations, and application settings.
+                {t("preferences.categoriesHint", "Customise your feed categories, AI recommendations, and application settings.")}
               </p>
             </div>
           </div>
