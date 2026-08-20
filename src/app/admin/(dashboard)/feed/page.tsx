@@ -150,7 +150,7 @@ export default function FeedPage() {
     return () => {
       eventSource.close();
     };
-  }, [dispatch, selectedCategories]);
+  }, [dispatch, categoriesKey, selectedCategories]);
   // Infinite scroll observer
   useEffect(() => {
     if (loading) return;
