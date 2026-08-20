@@ -62,21 +62,6 @@ export async function GET(request: Request) {
       allResults = multiCategoryResults.flat();
     }
 
-    // Fallback if TMDB API is missing a key in production or returns 401
-    if (allResults.length === 0) {
-      allResults = [
-        { id: 680, title: "Pulp Fiction", overview: "A burger-loving hit man, his philosophical partner, a drug-addled gangster's moll and a washed-up boxer converge in this sprawling, comedic crime caper.", release_date: "1994-09-10", poster_path: "/d5iIlFn5s0ImszYzBPb8SPCPb1s.jpg" },
-        { id: 157336, title: "Interstellar", overview: "The adventures of a group of explorers who make use of a newly discovered wormhole to surpass the limitations on human space travel.", release_date: "2014-11-05", poster_path: "/gEU2QlsUUHXjNPeQ121C11z0qeb.jpg" },
-        { id: 389, title: "12 Angry Men", overview: "The defense and the prosecution have rested and the jury is filing into the jury room to decide if a young Spanish-American is guilty or innocent of murdering his father.", release_date: "1957-04-10", poster_path: "/ow3wq89wM8qd5X7hWKxiRfsFf9C.jpg" },
-        { id: 346, title: "Seven Samurai", overview: "A samurai answers a village's request for protection after he falls on hard times. The town needs protection from bandits.", release_date: "1954-04-26", poster_path: "/8OKmBV5MACMvd8h10z8M8UifZ4I.jpg" },
-        { id: 238, title: "The Godfather", overview: "Spanning the years 1945 to 1955, a chronicle of the fictional Italian-American Corleone crime family.", release_date: "1972-03-14", poster_path: "/3bhkrj58Vtu7enYsRolD1fZdja1.jpg" },
-        { id: 13, title: "Forrest Gump", overview: "A man with a low IQ has accomplished great things in his life and been present during significant historic events.", release_date: "1994-06-23", poster_path: "/arw2vcBveWOVZr6pxd9XTd1TdQa.jpg" },
-        { id: 424, title: "Schindler's List", overview: "The true story of how businessman Oskar Schindler saved over a thousand Jewish lives from the Nazis while they worked as slaves.", release_date: "1993-12-15", poster_path: "/sF1U4EUQS8YHUYjNl3pMGNIQyr0.jpg" },
-        { id: 155, title: "The Dark Knight", overview: "Batman raises the stakes in his war on crime. With the help of Lt. Jim Gordon and District Attorney Harvey Dent.", release_date: "2008-07-16", poster_path: "/qJ2tW6WMUDux911r6m7haRef0WH.jpg" },
-        { id: 122, title: "The Lord of the Rings: The Return of the King", overview: "Aragorn is revealed as the heir to the ancient kings as he, Gandalf and the other members of the broken fellowship struggle to save Gondor.", release_date: "2003-12-01", poster_path: "/rCzpDGLbOoPwLjy3OAm5OUk0R0x.jpg" },
-        { id: 278, title: "The Shawshank Redemption", overview: "Framed in the 1940s for the double murder of his wife and her lover, upstanding banker Andy Dufresne begins a new life at the Shawshank prison.", release_date: "1994-09-23", poster_path: "/9cqNxx0GxF0bflZmeSMuL5tnGzr.jpg" }
-      ];
-    }
 
     // Remove duplicates
     const uniqueMap = new Map();

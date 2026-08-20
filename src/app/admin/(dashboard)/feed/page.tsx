@@ -122,8 +122,20 @@ export default function FeedPage() {
           return;
         }
 
-        // Add real-time item to Redux store silently without a toast popup
-        dispatch(addRealtimeItem(item));
+        // Only add real-time item if it matches the user's currently selected categories
+        const matchesCategory =
+          selectedCategories.length === 0 ||
+          selectedCategories.includes(item.type as Category) ||
+          (item.type === "news" && selectedCategories.includes(item.category as Category)) ||
+          (selectedCategories.includes("entertainment") && item.type === "movie") ||
+          (selectedCategories.includes("music") && item.type === "music") ||
+          (selectedCategories.includes("social") && item.type === "forum") ||
+          (selectedCategories.includes("sports") && item.type === "sports") ||
+          (selectedCategories.includes("science") && item.type === "science");
+
+        if (matchesCategory) {
+          dispatch(addRealtimeItem(item));
+        }
       } catch (err) {
         // eslint-disable-next-line no-console
         console.error("Failed to parse real-time event:", err);
@@ -138,7 +150,7 @@ export default function FeedPage() {
     return () => {
       eventSource.close();
     };
-  }, [dispatch]);
+  }, [dispatch, selectedCategories]);
   // Infinite scroll observer
   useEffect(() => {
     if (loading) return;
