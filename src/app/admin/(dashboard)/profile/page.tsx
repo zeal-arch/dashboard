@@ -4,13 +4,13 @@ import Breadcrumb from "@/components/ui/Breadcrumbs/Breadcrumb";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { enrichUserProfile, EnrichedProfile } from "@/lib/services/fullcontactApi";
-import { Github, Linkedin, Twitter, MapPin, Building2, FileText, ExternalLink, Code2, Award, Briefcase, GraduationCap, CheckCircle2 } from "lucide-react";
+import { Github, Linkedin, Twitter, MapPin, Building2, ExternalLink, Code2, Award, Briefcase, GraduationCap, CheckCircle2 } from "lucide-react";
 import { useSession } from "next-auth/react";
 
 export default function ProfilePage() {
   const { data: session } = useSession();
 
-  const user = session?.user || { name: "Zeal", email: "zeal@dashboard.dev" };
+  const user = session?.user || { name: "Zeal", email: "zealoussebastian464@gmail" };
   const email = user.email || "zeal@dashboard.dev";
 
   const [enrichedData, setEnrichedData] = useState<EnrichedProfile | null>(null);
@@ -119,27 +119,44 @@ export default function ProfilePage() {
 
             {/* Social Links & Action Buttons */}
             <div className="flex flex-wrap items-center justify-center gap-3 pt-2">
-              <a
-                href="https://github.com/zeal-arch/dashboard"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 rounded-xl bg-gray-900 px-4 py-2 text-xs font-semibold text-white shadow-sm transition hover:bg-gray-800 dark:bg-white dark:text-gray-900 dark:hover:bg-gray-100"
-              >
-                <Github className="h-4 w-4" />
-                GitHub Repository
-                <ExternalLink className="h-3 w-3 opacity-60" />
-              </a>
+              {displayGithub && (
+                <a
+                  href={displayGithub}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 rounded-xl bg-gray-900 px-4 py-2 text-xs font-semibold text-white shadow-sm transition hover:bg-gray-800 dark:bg-white dark:text-gray-900 dark:hover:bg-gray-100"
+                >
+                  <Github className="h-4 w-4" />
+                  GitHub Repository
+                  <ExternalLink className="h-3 w-3 opacity-60" />
+                </a>
+              )}
 
-              <a
-                href="https://dashboard-byzeal.vercel.app"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 rounded-xl bg-primary px-4 py-2 text-xs font-semibold text-white shadow-sm transition hover:bg-primary/90"
-              >
-                <FileText className="h-4 w-4" />
-                Live Demo App
-                <ExternalLink className="h-3 w-3 opacity-60" />
-              </a>
+              {displayLinkedin && (
+                <a
+                  href={displayLinkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 rounded-xl bg-[#0A66C2] px-4 py-2 text-xs font-semibold text-white shadow-sm transition hover:bg-[#0A66C2]/90"
+                >
+                  <Linkedin className="h-4 w-4" />
+                  LinkedIn
+                  <ExternalLink className="h-3 w-3 opacity-60" />
+                </a>
+              )}
+
+              {displayTwitter && (
+                <a
+                  href={displayTwitter}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 rounded-xl bg-primary px-4 py-2 text-xs font-semibold text-white shadow-sm transition hover:bg-primary/90"
+                >
+                  <Twitter className="h-4 w-4" />
+                  Live App
+                  <ExternalLink className="h-3 w-3 opacity-60" />
+                </a>
+              )}
             </div>
           </div>
         </div>
@@ -254,6 +271,13 @@ export default function ProfilePage() {
           </div>
         </div>
       </div>
+
+      {/* Only show attribution when enrichment actually worked */}
+      {!loading && enrichedData && (
+        <div className="flex justify-end">
+          <p className="text-xs text-gray-400">Profile enriched by FullContact</p>
+        </div>
+      )}
     </div>
   );
 }
