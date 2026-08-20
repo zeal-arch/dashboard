@@ -60,12 +60,12 @@ export const fetchContent = createAsyncThunk(
     }
 
     // Personalise using favorites history
-    const favoriteMovies = state.favorites.items.filter((item) => item.type === "movie");
+    const favoriteMovies = (state.favorites?.items || []).filter((item) => item.type === "movie");
     const movieHistoryId = favoriteMovies.length > 0
       ? favoriteMovies[favoriteMovies.length - 1].id.replace("tmdb-", "")
       : undefined;
 
-    const favoriteMusic = state.favorites.items.filter((item) => item.type === "music");
+    const favoriteMusic = (state.favorites?.items || []).filter((item) => item.type === "music");
     const musicHistoryId = favoriteMusic.length > 0
       ? favoriteMusic[favoriteMusic.length - 1].id.replace("saavn-", "")
       : undefined;
@@ -133,10 +133,10 @@ export const fetchContent = createAsyncThunk(
       // Pick the top 8 movies + music from the filtered pool as recommendations.
       // These are only extracted if the user has favorites.
       let recommendedItems: (ContentItem & { isRecommendation?: boolean })[] = [];
-      if (state.favorites.items.length > 0) {
+      if ((state.favorites?.items?.length || 0) > 0) {
         const recCandidates = items.filter((i) => i.type === "movie" || i.type === "music");
         recommendedItems = rankRecommendations(
-          state.favorites.items,
+          state.favorites?.items || [],
           recCandidates,
           8,
         ).map((i) => ({ ...i, isRecommendation: true }));

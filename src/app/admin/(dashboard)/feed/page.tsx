@@ -68,7 +68,7 @@ export default function FeedPage() {
   const dispatch = useAppDispatch();
   const { items, recommendedItems, loading, hasMore, page } = useAppSelector((s) => s.content);
   const selectedCategories = useAppSelector((s) => s.preferences.categories);
-  const favoriteCount = useAppSelector((s) => s.favorites.items.length);
+  const favoriteCount = useAppSelector((s) => s.favorites?.items?.length || 0);
   const isPersonalized = favoriteCount > 0;
 
   const observerRef = useRef<IntersectionObserver | null>(null);

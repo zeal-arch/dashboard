@@ -24,11 +24,34 @@ const rootReducer = combineReducers({
 const persistConfig = {
   key: "root",
   storage,
-  version: 2, // bump this whenever the state shape changes to auto-clear old localStorage
-  // Persist user preference choices and favorites lists, but keep content feed in memory only
-  // so browser refresh naturally busts cache.
+  version: 3, // bump this to clear/migrate old schema
   whitelist: ["preferences", "favorites"],
-  migrate: (state: unknown) => Promise.resolve(state as import("redux-persist/lib/types").PersistedState),
+  migrate: (state: any) => {
+    if (state && state.favorites) {
+      const fav = state.favorites;
+      // Handle migrating from legacy array-based favorites
+      if (Array.isArray(fav)) {
+        return Promise.resolve({
+          ...state,
+          favorites: {
+            items: fav,
+            ids: fav.map((i: any) => i.id || ""),
+          },
+        });
+      }
+      // Handle corrupt favorites structure lacking `items` array
+      if (!fav.items || !Array.isArray(fav.items)) {
+        return Promise.resolve({
+          ...state,
+          favorites: {
+            items: [],
+            ids: [],
+          },
+        });
+      }
+    }
+    return Promise.resolve(state);
+  },
 };
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);

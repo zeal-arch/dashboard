@@ -9,7 +9,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 export default function FavoritesPage() {
   const dispatch = useAppDispatch();
-  const favoriteItems = useAppSelector((s) => s.favorites.items || []);
+  const favoriteItems = useAppSelector((s) => s.favorites?.items || []);
 
   return (
     <>
