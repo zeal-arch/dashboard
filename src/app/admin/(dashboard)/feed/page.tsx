@@ -91,6 +91,13 @@ export default function FeedPage() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [categoriesKey]);
 
+  // Re-fetch recommendations when personalization changes (e.g. favoriting first item)
+  useEffect(() => {
+    if (favoriteCount > 0 && recommendedItems.length === 0 && !loading) {
+      dispatch(fetchContent({ categories: selectedCategories, page: 0, search: "", forceRefresh: true }));
+    }
+  }, [favoriteCount, recommendedItems.length, selectedCategories, loading, dispatch]);
+
   // Infinite scroll observer
   useEffect(() => {
     if (loading) return;

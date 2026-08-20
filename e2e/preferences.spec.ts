@@ -36,6 +36,8 @@ test.describe('Preferences and Theme Flow', () => {
 
   test('should toggle category preferences', async ({ page }) => {
     await page.goto('/admin/preferences');
+    // Wait for hydration to complete so React event handlers are fully attached
+    await page.waitForTimeout(1000);
 
     // Check for Heading "Content Preferences"
     await expect(page.locator('text=Content Preferences')).toBeVisible();
@@ -49,16 +51,22 @@ test.describe('Preferences and Theme Flow', () => {
     // If not selected, it's "border-gray-200".
     const initiallySelected = await categoryBtn.evaluate((el) => el.classList.contains('border-primary'));
 
-    // Toggle the category selection using force click to bypass entrance animation motion
-    await categoryBtn.click({ force: true });
+    // Toggle the category selection using dispatchEvent to bypass Framer Motion animation coordinate shifts
+    await categoryBtn.dispatchEvent('click');
 
-    // Verify selection state is toggled
-    const newlySelected = await categoryBtn.evaluate((el) => el.classList.contains('border-primary'));
-    expect(newlySelected).toBe(!initiallySelected);
+    // Verify selection state is toggled using auto-waiting assertions to handle React async render
+    if (initiallySelected) {
+      await expect(categoryBtn).not.toHaveClass(/border-primary/);
+    } else {
+      await expect(categoryBtn).toHaveClass(/border-primary/);
+    }
 
     // Reload and check persistence
     await page.reload();
-    const persistedSelected = await categoryBtn.evaluate((el) => el.classList.contains('border-primary'));
-    expect(persistedSelected).toBe(newlySelected);
+    if (initiallySelected) {
+      await expect(categoryBtn).not.toHaveClass(/border-primary/);
+    } else {
+      await expect(categoryBtn).toHaveClass(/border-primary/);
+    }
   });
 });

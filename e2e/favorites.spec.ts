@@ -12,6 +12,8 @@ test.describe('Favorites Flow', () => {
 
   test('should favorite an item, persist it on reload, and unfavorite it', async ({ page }) => {
     await page.goto('/admin/feed');
+    // Wait for hydration to complete so React event handlers are fully attached
+    await page.waitForTimeout(1000);
 
     // Wait for feed content to load
     await page.waitForSelector('button[aria-label="Drag to reorder"]');
