@@ -1,0 +1,77 @@
+{
+  "nav": {
+    "explore": "Galugarin",
+    "search": "Maghanap",
+    "trending": "Trending",
+    "favorites": "Mga paborito",
+    "history": "Kasaysayan",
+    "preferences": "Mga Kagustuhan"
+  },
+  "feed": {
+    "title": "Iyong Feed",
+    "recommendationsTitle": "Inirerekomenda para sa Iyo",
+    "loading": "Nilo-load ang feed ng personalization...",
+    "empty": "Walang available na content.",
+    "newAlert": "Bagong real-time na post ang natanggap! I-click para mag-load"
+  },
+  "trending": {
+    "title": "Nagte-trend na Nilalaman"
+  },
+  "favorites": {
+    "title": "Mga Paborito mo",
+    "empty": "Wala pang paborito",
+    "placeholder": "I-like ang mga card para makakuha ng mga personalized na rekomendasyon",
+    "clearAll": "I-clear lahat"
+  },
+  "search": {
+    "title": "Maghanap ng Nilalaman",
+    "placeholder": "Maghanap ng mga pelikula, musika, o balita...",
+    "noResults": "Walang nakitang resulta",
+    "noResultsHint": "Try a different search term",
+    "results": "resulta"
+  },
+  "preferences": {
+    "title": "Mga Kagustuhan sa Nilalaman",
+    "theme": "I-toggle ang Tema",
+    "categories": "Mga Kategorya ng Nilalaman",
+    "categoriesHint": "Piliin ang mga uri ng content na gusto mong makita"
+  },
+  "profile": {
+    "title": "Profile",
+    "editProfile": "I-edit ang Profile",
+    "save": "I-save ang mga pagbabago",
+    "name": "Pangalan",
+    "email": "Email",
+    "bio": "Bio",
+    "location": "Lokasyon",
+    "website": "Website"
+  },
+  "loginHistory": {
+    "title": "Kasaysayan ng Pag-login",
+    "device": "Device",
+    "location": "Lokasyon",
+    "time": "Oras",
+    "status": "Katayuan",
+    "success": "Tagumpay",
+    "failed": "Nabigo"
+  },
+  "chart": {
+    "title": "Analytics ng Nilalaman",
+    "views": "Mga view",
+    "engagement": "Pakikipag-ugnayan"
+  },
+  "common": {
+    "loading": "Naglo-load...",
+    "error": "May naganap na error",
+    "retry": "Subukan muli",
+    "refresh": "I-refresh",
+    "save": "I-save",
+    "cancel": "Kanselahin",
+    "delete": "Tanggalin",
+    "close": "Isara",
+    "back": "Bumalik",
+    "next": "Susunod",
+    "previous": "Nakaraang",
+    "noData": "Walang available na data"
+  }
+}

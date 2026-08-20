@@ -1,0 +1,77 @@
+{
+  "nav": {
+    "explore": "Explore",
+    "search": "Search",
+    "trending": "Trending",
+    "favorites": "Favorites",
+    "history": "History",
+    "preferences": "Preferences"
+  },
+  "feed": {
+    "title": "Your Feed",
+    "recommendationsTitle": "Recommended for You",
+    "loading": "Loading personalization feed...",
+    "empty": "No content available.",
+    "newAlert": "New real-time post received! Click to load"
+  },
+  "trending": {
+    "title": "Trending Content"
+  },
+  "favorites": {
+    "title": "Your Favorites",
+    "empty": "No favorites yet",
+    "placeholder": "Like cards to get personalized recommendations",
+    "clearAll": "Clear all"
+  },
+  "search": {
+    "title": "Search Content",
+    "placeholder": "Search for movies, music, or news...",
+    "noResults": "No results found",
+    "noResultsHint": "Try a different search term",
+    "results": "results"
+  },
+  "preferences": {
+    "title": "Content Preferences",
+    "theme": "Toggle Theme",
+    "categories": "Content Categories",
+    "categoriesHint": "Select the types of content you want to see"
+  },
+  "profile": {
+    "title": "Profile",
+    "editProfile": "Edit Profile",
+    "save": "Save changes",
+    "name": "Name",
+    "email": "Email",
+    "bio": "Bio",
+    "location": "Location",
+    "website": "Website"
+  },
+  "loginHistory": {
+    "title": "Login History",
+    "device": "Device",
+    "location": "Location",
+    "time": "Time",
+    "status": "Status",
+    "success": "Success",
+    "failed": "Failed"
+  },
+  "chart": {
+    "title": "Content Analytics",
+    "views": "Views",
+    "engagement": "Engagement"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "retry": "Retry",
+    "refresh": "Refresh",
+    "save": "Išsaugoti",
+    "cancel": "Atšaukti",
+    "delete": "Ištrinti",
+    "close": "Uždaryti",
+    "back": "Atgal",
+    "next": "Kitas",
+    "previous": "Ankstesnis",
+    "noData": "Nėra duomenų"
+  }
+}

@@ -1,9 +1,15 @@
 import { ContentItem } from "../store/contentSlice";
 
-export async function fetchTrendingMovies(historyId?: string): Promise<ContentItem[]> {
+export async function fetchTrendingMovies(historyId?: string, search: string = "", lang: string = "en"): Promise<ContentItem[]> {
   try {
     const url = historyId ? `/api/movies?historyId=${historyId}` : '/api/movies';
-    const response = await fetch(url);
+    const baseUrl = url.split('?')[0];
+    const existingQuery = url.split('?')[1] || '';
+    const queryParams = new URLSearchParams(existingQuery);
+    if (search) queryParams.append("q", search);
+    if (lang) queryParams.append("lang", lang);
+    const finalUrl = baseUrl + "?" + queryParams.toString();
+    const response = await fetch(finalUrl);
     if (!response.ok) {
       throw new Error("TMDB API error");
     }

@@ -1,0 +1,77 @@
+{
+  "nav": {
+    "explore": "Explorar",
+    "search": "Buscar",
+    "trending": "Tendencia",
+    "favorites": "Favoritos",
+    "history": "Historia",
+    "preferences": "Preferencias"
+  },
+  "feed": {
+    "title": "Tu feed",
+    "recommendationsTitle": "Recomendado para ti",
+    "loading": "Cargando feed de personalización...",
+    "empty": "No hay contenido disponible.",
+    "newAlert": "¡Nueva publicación en tiempo real recibida! Haga clic para cargar"
+  },
+  "trending": {
+    "title": "Contenido de tendencia"
+  },
+  "favorites": {
+    "title": "Tus favoritos",
+    "empty": "Aún no hay favoritos",
+    "placeholder": "Me gusta tarjetas para obtener recomendaciones personalizadas",
+    "clearAll": "Borrar todo"
+  },
+  "search": {
+    "title": "Buscar contenido",
+    "placeholder": "Busque películas, música o noticias...",
+    "noResults": "No se encontraron resultados",
+    "noResultsHint": "Pruebe con un término de búsqueda diferente",
+    "results": "resultados"
+  },
+  "preferences": {
+    "title": "Preferencias de contenido",
+    "theme": "Alternar tema",
+    "categories": "Categorías de contenido",
+    "categoriesHint": "Selecciona los tipos de contenido que quieres ver"
+  },
+  "profile": {
+    "title": "Perfil",
+    "editProfile": "Editar perfil",
+    "save": "Guardar cambios",
+    "name": "Nombre",
+    "email": "Correo electrónico",
+    "bio": "Biografía",
+    "location": "Ubicación",
+    "website": "Sitio web"
+  },
+  "loginHistory": {
+    "title": "Historial de inicio de sesión",
+    "device": "Dispositivo",
+    "location": "Ubicación",
+    "time": "Tiempo",
+    "status": "Estado",
+    "success": "Éxito",
+    "failed": "Fallido"
+  },
+  "chart": {
+    "title": "Análisis de contenido",
+    "views": "Vistas",
+    "engagement": "Compromiso"
+  },
+  "common": {
+    "loading": "Cargando...",
+    "error": "Se produjo un error",
+    "retry": "Rever",
+    "refresh": "Refrescar",
+    "save": "Ahorrar",
+    "cancel": "Cancelar",
+    "delete": "Borrar",
+    "close": "Cerca",
+    "back": "Atrás",
+    "next": "Próximo",
+    "previous": "Anterior",
+    "noData": "No hay datos disponibles"
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "nav": {
+    "explore": "Teroka",
+    "search": "Cari",
+    "trending": "Trending",
+    "favorites": "Kegemaran",
+    "history": "Sejarah",
+    "preferences": "Keutamaan"
+  },
+  "feed": {
+    "title": "Suapan Anda",
+    "recommendationsTitle": "Disyorkan untuk Anda",
+    "loading": "Memuatkan suapan pemperibadian...",
+    "empty": "Tiada kandungan tersedia.",
+    "newAlert": "Siaran masa nyata baharu diterima! Klik untuk memuatkan"
+  },
+  "trending": {
+    "title": "Kandungan Trend"
+  },
+  "favorites": {
+    "title": "Kegemaran Anda",
+    "empty": "Tiada kegemaran lagi",
+    "placeholder": "Suka kad untuk mendapatkan cadangan yang diperibadikan",
+    "clearAll": "Kosongkan semua"
+  },
+  "search": {
+    "title": "Cari Kandungan",
+    "placeholder": "Cari filem, muzik atau berita...",
+    "noResults": "Tiada hasil ditemui",
+    "noResultsHint": "Cuba istilah carian yang berbeza",
+    "results": "keputusan"
+  },
+  "preferences": {
+    "title": "Keutamaan Kandungan",
+    "theme": "Togol Tema",
+    "categories": "Kategori Kandungan",
+    "categoriesHint": "Pilih jenis kandungan yang ingin anda lihat"
+  },
+  "profile": {
+    "title": "Profil",
+    "editProfile": "Edit Profil",
+    "save": "Simpan perubahan",
+    "name": "Nama",
+    "email": "E-mel",
+    "bio": "Bio",
+    "location": "Lokasi",
+    "website": "laman web"
+  },
+  "loginHistory": {
+    "title": "Sejarah Log Masuk",
+    "device": "Peranti",
+    "location": "Lokasi",
+    "time": "Masa",
+    "status": "Status",
+    "success": "Kejayaan",
+    "failed": "gagal"
+  },
+  "chart": {
+    "title": "Analitis Kandungan",
+    "views": "Pandangan",
+    "engagement": "Pertunangan"
+  },
+  "common": {
+    "loading": "Memuatkan...",
+    "error": "Ralat berlaku",
+    "retry": "Cuba semula",
+    "refresh": "Segarkan semula",
+    "save": "Jimat",
+    "cancel": "Batal",
+    "delete": "Padam",
+    "close": "tutup",
+    "back": "belakang",
+    "next": "Seterusnya",
+    "previous": "Sebelumnya",
+    "noData": "Tiada data tersedia"
+  }
+}

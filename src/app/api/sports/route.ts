@@ -47,7 +47,12 @@ export async function GET() {
       )
     );
 
-    const allFixtures: any[] = [];
+    interface SportsFixtureItem {
+      fixture?: { id?: number | string };
+      [key: string]: unknown;
+    }
+
+    const allFixtures: SportsFixtureItem[] = [];
     results.forEach(res => {
       if (res.status === 'fulfilled' && res.value.response) {
         allFixtures.push(...res.value.response);

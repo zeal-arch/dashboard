@@ -3,8 +3,14 @@ import { ContentItem } from "../store/contentSlice";
 interface BreweryRecord { id: string; name: string; brewery_type?: string; city?: string; state_province?: string; website_url?: string; }
 interface FruitRecord { id: number; name: string; nutritions?: { calories?: number; carbohydrates?: number; protein?: number }; }
 
-export async function fetchTrendingFood(): Promise<ContentItem[]> {
-  const response = await fetch("/api/food");
+export async function fetchTrendingFood(search: string = "", lang: string = "en"): Promise<ContentItem[]> {
+  const baseUrl = "/api/food".split('?')[0];
+    const existingQuery = "/api/food".split('?')[1] || '';
+    const queryParams = new URLSearchParams(existingQuery);
+    if (search) queryParams.append("q", search);
+    if (lang) queryParams.append("lang", lang);
+    const finalUrl = baseUrl + "?" + queryParams.toString();
+    const response = await fetch(finalUrl);
   if (!response.ok) return [];
   const json = await response.json();
 

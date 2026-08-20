@@ -2,11 +2,10 @@
 
 import { useEffect, useCallback, useRef } from "react";
 import { useAppDispatch, useAppSelector } from "@/lib/store/hooks";
-import { fetchContent, resetContent, reorderItems, addRealtimeItem, ContentItem } from "@/lib/store/contentSlice";
+import { fetchContent, resetContent, reorderItems, ContentItem, addRealtimeItem } from "@/lib/store/contentSlice";
 import { toggleCategory, Category } from "@/lib/store/preferencesSlice";
 import { ContentCard } from "@/components/ui/ContentCard";
 import { AnimatePresence, motion } from "framer-motion";
-import { toast } from "sonner";
 import {
   DndContext,
   closestCenter,
@@ -72,7 +71,7 @@ export default function FeedPage() {
   const selectedCategories = useAppSelector((s) => s.preferences.categories);
   const favoriteCount = useAppSelector((s) => s.favorites?.items?.length || 0);
   const isPersonalized = favoriteCount > 0;
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   const observerRef = useRef<IntersectionObserver | null>(null);
   const bottomRef = useRef<HTMLDivElement | null>(null);
@@ -86,20 +85,29 @@ export default function FeedPage() {
   // reference with the same values (happens during persist rehydration)
   const categoriesKey = [...selectedCategories].sort().join(",");
 
-  // Initial load / re-fetch when categories actually change in value.
-  // providers.tsx guarantees this only runs after redux-persist rehydration.
+  // Track previous isPersonalized value to only re-fetch on the 0↔1 transition
+  // (i.e. when user adds their FIRST favorite or removes their LAST one).
+  // This ensures recommendations are computed/cleared without re-fetching on every like.
+  const prevPersonalizedRef = useRef(isPersonalized);
+
+  // Initial load + re-fetch when categories/language change.
   useEffect(() => {
     dispatch(resetContent());
     dispatch(fetchContent({ categories: selectedCategories, page: 0, search: "", forceRefresh: true }));
+    prevPersonalizedRef.current = isPersonalized;
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [categoriesKey]);
+  }, [categoriesKey, i18n.language]);
 
-  // Re-fetch recommendations when personalization changes (e.g. favoriting first item)
+  // Re-fetch ONLY when personalization state flips (0→1 or 1→0)
+  // so recommendations are computed on the first favorite / cleared on the last unfavorite.
   useEffect(() => {
-    if (favoriteCount > 0 && recommendedItems.length === 0 && !loading) {
-      dispatch(fetchContent({ categories: selectedCategories, page: 0, search: "", forceRefresh: true }));
-    }
-  }, [favoriteCount, recommendedItems.length, selectedCategories, loading, dispatch]);
+    if (prevPersonalizedRef.current === isPersonalized) return; // no flip, skip
+    prevPersonalizedRef.current = isPersonalized;
+    dispatch(resetContent());
+    dispatch(fetchContent({ categories: selectedCategories, page: 0, search: "", forceRefresh: true }));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isPersonalized]);
+
 
   // Server-Sent Events (SSE) connection for real-time posts
   useEffect(() => {
@@ -109,38 +117,28 @@ export default function FeedPage() {
       try {
         const item = JSON.parse(event.data);
         if (item.connected) {
+          // eslint-disable-next-line no-console
           console.log("Real-time feed connected successfully");
           return;
         }
 
-        // Add real-time item to Redux store
+        // Add real-time item to Redux store silently without a toast popup
         dispatch(addRealtimeItem(item));
-
-        // Show a premium toast notification
-        toast.info(t("feed.newAlert"), {
-          description: item.title,
-          duration: 6000,
-          action: {
-            label: "View",
-            onClick: () => {
-              window.scrollTo({ top: 0, behavior: "smooth" });
-            }
-          }
-        });
       } catch (err) {
+        // eslint-disable-next-line no-console
         console.error("Failed to parse real-time event:", err);
       }
     };
 
     eventSource.onerror = (err) => {
+      // eslint-disable-next-line no-console
       console.error("EventSource connection error:", err);
     };
 
     return () => {
       eventSource.close();
     };
-  }, [dispatch, t]);
-
+  }, [dispatch]);
   // Infinite scroll observer
   useEffect(() => {
     if (loading) return;
@@ -205,7 +203,7 @@ export default function FeedPage() {
           className="ml-auto flex items-center gap-1.5 rounded-xl border border-gray-200/80 bg-white/60 px-3.5 py-2 text-xs font-semibold text-gray-600 transition hover:bg-white hover:text-gray-900 dark:border-white/10 dark:bg-white/5 dark:text-gray-400 dark:hover:bg-white/10 dark:hover:text-white backdrop-blur"
         >
           <RefreshCw className="h-3.5 w-3.5" />
-          Refresh
+          {t("common.refresh")}
         </button>
       </div>
 

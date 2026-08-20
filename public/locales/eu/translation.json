@@ -1,0 +1,77 @@
+{
+  "nav": {
+    "explore": "Arakatu",
+    "search": "Bilatu",
+    "trending": "Joera",
+    "favorites": "Gogokoak",
+    "history": "Historia",
+    "preferences": "Hobespenak"
+  },
+  "feed": {
+    "title": "Zure jarioa",
+    "recommendationsTitle": "Zuretzat gomendatua",
+    "loading": "Pertsonalizazio-jarioa kargatzen...",
+    "empty": "Ez dago edukirik eskuragarri.",
+    "newAlert": "Jasotako denbora errealeko argitalpen berria! Egin klik kargatzeko"
+  },
+  "trending": {
+    "title": "Modan dauden edukiak"
+  },
+  "favorites": {
+    "title": "Zure gogokoenak",
+    "empty": "Oraindik ez dago gogokorik",
+    "placeholder": "Atsegin dut txartelak gomendio pertsonalizatuak lortzeko",
+    "clearAll": "Garbitu dena"
+  },
+  "search": {
+    "title": "Bilatu edukia",
+    "placeholder": "Bilatu filmak, musika edo albisteak...",
+    "noResults": "Ez da emaitzarik aurkitu",
+    "noResultsHint": "Saiatu beste bilaketa-termino bat",
+    "results": "emaitzak"
+  },
+  "preferences": {
+    "title": "Edukiaren Hobespenak",
+    "theme": "Toggle Theme",
+    "categories": "Eduki Kategoriak",
+    "categoriesHint": "Hautatu ikusi nahi dituzun eduki motak"
+  },
+  "profile": {
+    "title": "Profila",
+    "editProfile": "Editatu profila",
+    "save": "Gorde aldaketak",
+    "name": "Izena",
+    "email": "Posta elektronikoa",
+    "bio": "Bio",
+    "location": "Kokapena",
+    "website": "Webgunea"
+  },
+  "loginHistory": {
+    "title": "Saioa hasteko historia",
+    "device": "Gailua",
+    "location": "Kokapena",
+    "time": "Denbora",
+    "status": "Egoera",
+    "success": "Arrakasta",
+    "failed": "Huts egin du"
+  },
+  "chart": {
+    "title": "Edukien Analitika",
+    "views": "Ikuspegiak",
+    "engagement": "Engaiamendua"
+  },
+  "common": {
+    "loading": "Kargatzen...",
+    "error": "Errore bat gertatu da",
+    "retry": "Saiatu berriro",
+    "refresh": "Freskatu",
+    "save": "Gorde",
+    "cancel": "Utzi",
+    "delete": "Ezabatu",
+    "close": "Itxi",
+    "back": "Itzuli",
+    "next": "Hurrengoa",
+    "previous": "Aurrekoa",
+    "noData": "Ez dago daturik eskuragarri"
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "nav": {
+    "explore": "Raziščite",
+    "search": "Iskanje",
+    "trending": "V trendu",
+    "favorites": "Priljubljene",
+    "history": "Zgodovina",
+    "preferences": "Nastavitve"
+  },
+  "feed": {
+    "title": "Vaš vir",
+    "recommendationsTitle": "Priporočeno za vas",
+    "loading": "Nalaganje vira za prilagajanje ...",
+    "empty": "Vsebina ni na voljo.",
+    "newAlert": "Prejeta nova objava v realnem času! Kliknite za nalaganje"
+  },
+  "trending": {
+    "title": "Vsebina v trendu"
+  },
+  "favorites": {
+    "title": "Vaši priljubljeni",
+    "empty": "Ni še priljubljenih",
+    "placeholder": "Všečkajte kartice, da dobite prilagojena priporočila",
+    "clearAll": "Počisti vse"
+  },
+  "search": {
+    "title": "Iskanje po vsebini",
+    "placeholder": "Poiščite filme, glasbo ali novice ...",
+    "noResults": "Ni rezultatov",
+    "noResultsHint": "Poskusite z drugim iskalnim izrazom",
+    "results": "rezultate"
+  },
+  "preferences": {
+    "title": "Nastavitve vsebine",
+    "theme": "Preklopi temo",
+    "categories": "Vsebinske kategorije",
+    "categoriesHint": "Izberite vrste vsebine, ki jo želite videti"
+  },
+  "profile": {
+    "title": "Profil",
+    "editProfile": "Uredi profil",
+    "save": "Shranite spremembe",
+    "name": "Ime",
+    "email": "E-pošta",
+    "bio": "Bio",
+    "location": "Lokacija",
+    "website": "Spletna stran"
+  },
+  "loginHistory": {
+    "title": "Zgodovina prijave",
+    "device": "Naprava",
+    "location": "Lokacija",
+    "time": "Čas",
+    "status": "Stanje",
+    "success": "Uspeh",
+    "failed": "Ni uspelo"
+  },
+  "chart": {
+    "title": "Analitika vsebine",
+    "views": "Pogledi",
+    "engagement": "Zaroka"
+  },
+  "common": {
+    "loading": "Nalaganje...",
+    "error": "Prišlo je do napake",
+    "retry": "Poskusite znova",
+    "refresh": "Osveži",
+    "save": "Shrani",
+    "cancel": "Prekliči",
+    "delete": "Izbriši",
+    "close": "Zapri",
+    "back": "Nazaj",
+    "next": "Naprej",
+    "previous": "Prejšnja",
+    "noData": "Ni podatkov"
+  }
+}

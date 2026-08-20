@@ -10,9 +10,15 @@ interface SaavnSong {
   releaseDate?: string;
 }
 
-export async function fetchTrendingMusic(historyId?: string): Promise<ContentItem[]> {
+export async function fetchTrendingMusic(historyId?: string, search: string = "", lang: string = "en"): Promise<ContentItem[]> {
   const url = historyId ? `/api/music?historyId=${encodeURIComponent(historyId)}` : "/api/music";
-  const response = await fetch(url);
+  const baseUrl = url.split('?')[0];
+    const existingQuery = url.split('?')[1] || '';
+    const queryParams = new URLSearchParams(existingQuery);
+    if (search) queryParams.append("q", search);
+    if (lang) queryParams.append("lang", lang);
+    const finalUrl = baseUrl + "?" + queryParams.toString();
+    const response = await fetch(finalUrl);
   if (!response.ok) return [];
   const json = await response.json();
   if (!Array.isArray(json.songs)) return [];

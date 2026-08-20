@@ -117,3 +117,8 @@ body {
     @apply bg-background text-foreground;
   }
 }
+/* Hide Google Translate Widget */
+.goog-te-banner-frame.skiptranslate { display: none !important; }
+body { top: 0px !important; }
+.goog-te-combo { display: none !important; }
+#google_translate_element { display: none !important; }

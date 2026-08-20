@@ -1,0 +1,77 @@
+{
+  "nav": {
+    "explore": "Explorar",
+    "search": "Procurar",
+    "trending": "Tendências",
+    "favorites": "Favoritos",
+    "history": "História",
+    "preferences": "Preferências"
+  },
+  "feed": {
+    "title": "Seu feed",
+    "recommendationsTitle": "Recomendado para você",
+    "loading": "Carregando feed de personalização...",
+    "empty": "Nenhum conteúdo disponível.",
+    "newAlert": "Nova postagem em tempo real recebida! Clique para carregar"
+  },
+  "trending": {
+    "title": "Conteúdo em alta"
+  },
+  "favorites": {
+    "title": "Seus favoritos",
+    "empty": "Ainda não há favoritos",
+    "placeholder": "Curta cartões para receber recomendações personalizadas",
+    "clearAll": "Limpar tudo"
+  },
+  "search": {
+    "title": "Pesquisar conteúdo",
+    "placeholder": "Pesquise filmes, músicas ou notícias...",
+    "noResults": "Nenhum resultado encontrado",
+    "noResultsHint": "Experimente um termo de pesquisa diferente",
+    "results": "resultados"
+  },
+  "preferences": {
+    "title": "Preferências de conteúdo",
+    "theme": "Alternar tema",
+    "categories": "Categorias de conteúdo",
+    "categoriesHint": "Selecione os tipos de conteúdo que deseja ver"
+  },
+  "profile": {
+    "title": "Perfil",
+    "editProfile": "Editar perfil",
+    "save": "Salvar alterações",
+    "name": "Nome",
+    "email": "E-mail",
+    "bio": "Biografia",
+    "location": "Localização",
+    "website": "Site"
+  },
+  "loginHistory": {
+    "title": "Histórico de login",
+    "device": "Dispositivo",
+    "location": "Localização",
+    "time": "Tempo",
+    "status": "Status",
+    "success": "Sucesso",
+    "failed": "Fracassado"
+  },
+  "chart": {
+    "title": "Análise de conteúdo",
+    "views": "Visualizações",
+    "engagement": "Noivado"
+  },
+  "common": {
+    "loading": "Carregando...",
+    "error": "Ocorreu um erro",
+    "retry": "Tentar novamente",
+    "refresh": "Atualizar",
+    "save": "Salvar",
+    "cancel": "Cancelar",
+    "delete": "Excluir",
+    "close": "Fechar",
+    "back": "Voltar",
+    "next": "Próximo",
+    "previous": "Anterior",
+    "noData": "Não há dados disponíveis"
+  }
+}

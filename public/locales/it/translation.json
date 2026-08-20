@@ -1,0 +1,77 @@
+{
+  "nav": {
+    "explore": "Esplorare",
+    "search": "Ricerca",
+    "trending": "Tendenza",
+    "favorites": "Preferiti",
+    "history": "Storia",
+    "preferences": "Preferenze"
+  },
+  "feed": {
+    "title": "Il tuo feed",
+    "recommendationsTitle": "Consigliato per te",
+    "loading": "Caricamento feed di personalizzazione...",
+    "empty": "Nessun contenuto disponibile",
+    "newAlert": "Nuovo post in tempo reale ricevuto! Fare clic per caricare"
+  },
+  "trending": {
+    "title": "Contenuti di tendenza"
+  },
+  "favorites": {
+    "title": "I tuoi preferiti",
+    "empty": "Nessun preferito ancora",
+    "placeholder": "Metti Mi piace alle carte per ottenere consigli personalizzati",
+    "clearAll": "Cancella tutto"
+  },
+  "search": {
+    "title": "Cerca contenuto",
+    "placeholder": "Cerca film, musica o notizie...",
+    "noResults": "Nessun risultato trovato",
+    "noResultsHint": "Prova un termine di ricerca diverso",
+    "results": "risultati"
+  },
+  "preferences": {
+    "title": "Preferenze contenuti",
+    "theme": "Attiva/disattiva tema",
+    "categories": "Categorie di contenuti",
+    "categoriesHint": "Seleziona i tipi di contenuti che desideri vedere"
+  },
+  "profile": {
+    "title": "Profilo",
+    "editProfile": "Modifica profilo",
+    "save": "Salva modifiche",
+    "name": "Nome",
+    "email": "E-mail",
+    "bio": "Bio",
+    "location": "Posizione",
+    "website": "Sito web"
+  },
+  "loginHistory": {
+    "title": "Cronologia degli accessi",
+    "device": "Dispositivo",
+    "location": "Posizione",
+    "time": "Tempo",
+    "status": "Stato",
+    "success": "Successo",
+    "failed": "Fallito"
+  },
+  "chart": {
+    "title": "Analisi dei contenuti",
+    "views": "Viste",
+    "engagement": "Fidanzamento"
+  },
+  "common": {
+    "loading": "Caricamento...",
+    "error": "Si è verificato un errore",
+    "retry": "Riprova",
+    "refresh": "Aggiorna",
+    "save": "Salva",
+    "cancel": "Cancellare",
+    "delete": "Eliminare",
+    "close": "Vicino",
+    "back": "Indietro",
+    "next": "Prossimo",
+    "previous": "Precedente",
+    "noData": "Nessun dato disponibile"
+  }
+}

@@ -11,8 +11,14 @@ interface FootballMatch {
   goals?: FootballGoals;
 }
 
-export async function fetchTrendingSports(): Promise<ContentItem[]> {
-  const response = await fetch("/api/sports");
+export async function fetchTrendingSports(search: string = "", lang: string = "en"): Promise<ContentItem[]> {
+  const baseUrl = "/api/sports".split('?')[0];
+    const existingQuery = "/api/sports".split('?')[1] || '';
+    const queryParams = new URLSearchParams(existingQuery);
+    if (search) queryParams.append("q", search);
+    if (lang) queryParams.append("lang", lang);
+    const finalUrl = baseUrl + "?" + queryParams.toString();
+    const response = await fetch(finalUrl);
   if (!response.ok) return [];
   const json = await response.json();
   if (!Array.isArray(json.fixtures) || json.fixtures.length === 0) return [];

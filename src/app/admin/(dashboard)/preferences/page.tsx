@@ -9,11 +9,11 @@ import { cn } from "@/lib/utils";
 
 const CATEGORIES: { id: Category; label: string; emoji: string; description: string }[] = [
   { id: "technology", label: "Technology", emoji: "💻", description: "AI, gadgets, software, startups" },
-  { id: "sports",     label: "Sports",     emoji: "⚽", description: "Football, cricket, tennis, NBA" },
-  { id: "finance",    label: "Finance",    emoji: "📈", description: "Markets, crypto, economy, stocks" },
+  { id: "sports", label: "Sports", emoji: "⚽", description: "Football, cricket, tennis, NBA" },
+  { id: "finance", label: "Finance", emoji: "📈", description: "Markets, crypto, economy, stocks" },
   { id: "entertainment", label: "Entertainment", emoji: "🎬", description: "Movies, music, TV shows, gaming" },
-  { id: "health",     label: "Health",     emoji: "🏥", description: "Wellness, medicine, fitness, nutrition" },
-  { id: "science",    label: "Science",    emoji: "🔬", description: "Space, research, discoveries, climate" },
+  { id: "health", label: "Health", emoji: "🏥", description: "Wellness, medicine, fitness, nutrition" },
+  { id: "science", label: "Science", emoji: "🔬", description: "Space, research, discoveries, climate" },
 ];
 
 export default function PreferencesPage() {
@@ -82,7 +82,7 @@ export default function PreferencesPage() {
 
         {/* Info box */}
         <div className="rounded-xl border border-blue-100 bg-blue-50/50 p-4 text-xs text-blue-700 dark:border-blue-900/30 dark:bg-blue-950/20 dark:text-blue-400">
-          ✨ Your preferences are saved automatically to your browser and will persist across sessions.
+          Your preferences are saved automatically to your browser and will persist across sessions.
           Head to <strong>My Feed</strong> to see personalised content based on your selections.
         </div>
       </div>

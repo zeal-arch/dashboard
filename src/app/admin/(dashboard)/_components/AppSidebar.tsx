@@ -114,7 +114,8 @@ export function AppSidebar() {
               setTheme(newTheme);
               dispatch(setDarkMode(newTheme === "dark"));
             }}
-            title={t("preferences.theme")}
+            title="Toggle Theme"
+            aria-label="Toggle Theme"
             className={getGlassButtonClass(false)}
           >
             {resolvedTheme === "light" ? (

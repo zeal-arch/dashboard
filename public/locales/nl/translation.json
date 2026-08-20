@@ -1,0 +1,77 @@
+{
+  "nav": {
+    "explore": "Ontdekken",
+    "search": "Zoekopdracht",
+    "trending": "Populair",
+    "favorites": "Favorieten",
+    "history": "Geschiedenis",
+    "preferences": "Voorkeuren"
+  },
+  "feed": {
+    "title": "Jouw feed",
+    "recommendationsTitle": "Aanbevolen voor jou",
+    "loading": "Personalisatiefeed laden...",
+    "empty": "Geen inhoud beschikbaar.",
+    "newAlert": "Nieuwe realtime post ontvangen! Klik om te laden"
+  },
+  "trending": {
+    "title": "Populaire inhoud"
+  },
+  "favorites": {
+    "title": "Je favorieten",
+    "empty": "Nog geen favorieten",
+    "placeholder": "Vind kaarten leuk om gepersonaliseerde aanbevelingen te krijgen",
+    "clearAll": "Alles wissen"
+  },
+  "search": {
+    "title": "Zoek inhoud",
+    "placeholder": "Zoeken naar films, muziek of nieuws...",
+    "noResults": "Geen resultaten gevonden",
+    "noResultsHint": "Probeer een andere zoekterm",
+    "results": "resultaten"
+  },
+  "preferences": {
+    "title": "Inhoudsvoorkeuren",
+    "theme": "Thema wisselen",
+    "categories": "Inhoudscategorieën",
+    "categoriesHint": "Selecteer de soorten inhoud die u wilt zien"
+  },
+  "profile": {
+    "title": "Profiel",
+    "editProfile": "Profiel bewerken",
+    "save": "Wijzigingen opslaan",
+    "name": "Naam",
+    "email": "E-mail",
+    "bio": "Bio",
+    "location": "Locatie",
+    "website": "Website"
+  },
+  "loginHistory": {
+    "title": "Inloggeschiedenis",
+    "device": "Apparaat",
+    "location": "Locatie",
+    "time": "Tijd",
+    "status": "Status",
+    "success": "Succes",
+    "failed": "Mislukt"
+  },
+  "chart": {
+    "title": "Inhoudsanalyse",
+    "views": "Bekeken",
+    "engagement": "Betrokkenheid"
+  },
+  "common": {
+    "loading": "Laden...",
+    "error": "Er is een fout opgetreden",
+    "retry": "Opnieuw proberen",
+    "refresh": "Vernieuwen",
+    "save": "Redden",
+    "cancel": "Annuleren",
+    "delete": "Verwijderen",
+    "close": "Dichtbij",
+    "back": "Rug",
+    "next": "Volgende",
+    "previous": "Vorig",
+    "noData": "Geen gegevens beschikbaar"
+  }
+}

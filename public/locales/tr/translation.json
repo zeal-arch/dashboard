@@ -1,0 +1,77 @@
+{
+  "nav": {
+    "explore": "Keşfetmek",
+    "search": "Aramak",
+    "trending": "Trend olan",
+    "favorites": "Favoriler",
+    "history": "Tarih",
+    "preferences": "Tercihler"
+  },
+  "feed": {
+    "title": "Feed'iniz",
+    "recommendationsTitle": "Sizin için Önerilenler",
+    "loading": "Kişiselleştirme feed'i yükleniyor...",
+    "empty": "İçerik mevcut değil.",
+    "newAlert": "Yeni gerçek zamanlı gönderi alındı! Yüklemek için tıklayın"
+  },
+  "trending": {
+    "title": "Trend Olan İçerik"
+  },
+  "favorites": {
+    "title": "Favorileriniz",
+    "empty": "Henüz favori yok",
+    "placeholder": "Kişiselleştirilmiş öneriler almak için kartları beğenin",
+    "clearAll": "Tümünü temizle"
+  },
+  "search": {
+    "title": "İçerik Ara",
+    "placeholder": "Film, müzik veya haber arayın...",
+    "noResults": "Sonuç bulunamadı",
+    "noResultsHint": "Farklı bir arama terimi deneyin",
+    "results": "sonuçlar"
+  },
+  "preferences": {
+    "title": "İçerik Tercihleri",
+    "theme": "Temayı Değiştir",
+    "categories": "İçerik Kategorileri",
+    "categoriesHint": "Görmek istediğiniz içerik türlerini seçin"
+  },
+  "profile": {
+    "title": "Profil",
+    "editProfile": "Profili Düzenle",
+    "save": "Değişiklikleri kaydet",
+    "name": "İsim",
+    "email": "E-posta",
+    "bio": "Biyografi",
+    "location": "Konum",
+    "website": "Web sitesi"
+  },
+  "loginHistory": {
+    "title": "Giriş Geçmişi",
+    "device": "Cihaz",
+    "location": "Konum",
+    "time": "Zaman",
+    "status": "Durum",
+    "success": "Başarı",
+    "failed": "Arızalı"
+  },
+  "chart": {
+    "title": "İçerik Analizi",
+    "views": "Görünümler",
+    "engagement": "Nişanlanmak"
+  },
+  "common": {
+    "loading": "Yükleniyor...",
+    "error": "Bir hata oluştu",
+    "retry": "Yeniden dene",
+    "refresh": "Yenile",
+    "save": "Kaydetmek",
+    "cancel": "İptal etmek",
+    "delete": "Silmek",
+    "close": "Kapalı",
+    "back": "Geri",
+    "next": "Sonraki",
+    "previous": "Öncesi",
+    "noData": "Veri yok"
+  }
+}

@@ -3,9 +3,15 @@ import { ContentItem } from "../store/contentSlice";
 // Fallback image if reddit post has no image
 const REDDIT_FALLBACK_IMAGE = "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800";
 
-export async function fetchRedditPosts(): Promise<ContentItem[]> {
+export async function fetchRedditPosts(search: string = "", lang: string = "en"): Promise<ContentItem[]> {
   try {
-    const response = await fetch("/api/reddit");
+    const baseUrl = "/api/reddit".split('?')[0];
+    const existingQuery = "/api/reddit".split('?')[1] || '';
+    const queryParams = new URLSearchParams(existingQuery);
+    if (search) queryParams.append("q", search);
+    if (lang) queryParams.append("lang", lang);
+    const finalUrl = baseUrl + "?" + queryParams.toString();
+    const response = await fetch(finalUrl);
     if (!response.ok) {
       throw new Error("Reddit API error");
     }

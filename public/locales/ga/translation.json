@@ -1,0 +1,77 @@
+{
+  "nav": {
+    "explore": "Déan iniúchadh",
+    "search": "Cuardach",
+    "trending": "Treocht",
+    "favorites": "Ceanáin",
+    "history": "Stair",
+    "preferences": "Roghanna"
+  },
+  "feed": {
+    "title": "Do bheatha",
+    "recommendationsTitle": "Molta duitse",
+    "loading": "Fotha pearsanaithe á lódáil...",
+    "empty": "Níl aon ábhar ar fáil.",
+    "newAlert": "Post nua fíor-ama faighte! Cliceáil chun luchtú"
+  },
+  "trending": {
+    "title": "Ábhar Trending"
+  },
+  "favorites": {
+    "title": "Do Cheanáin",
+    "empty": "Níl aon cheanáin go fóill",
+    "placeholder": "Cosúil le cártaí chun moltaí pearsantaithe a fháil",
+    "clearAll": "Glan go léir"
+  },
+  "search": {
+    "title": "Cuardaigh Ábhar",
+    "placeholder": "Cuardaigh scannáin, ceol nó nuacht...",
+    "noResults": "Níor aimsíodh aon torthaí",
+    "noResultsHint": "Bain triail as téarma cuardaigh eile",
+    "results": "torthaí"
+  },
+  "preferences": {
+    "title": "Roghanna Ábhar",
+    "theme": "Scoránaigh Téama",
+    "categories": "Catagóirí Ábhar",
+    "categoriesHint": "Roghnaigh na cineálacha ábhair is mian leat a fheiceáil"
+  },
+  "profile": {
+    "title": "Próifíl",
+    "editProfile": "Cuir Próifíl in Eagar",
+    "save": "Sábháil athruithe",
+    "name": "Ainm",
+    "email": "Ríomhphost",
+    "bio": "Bith",
+    "location": "Suíomh",
+    "website": "Suíomh Gréasáin"
+  },
+  "loginHistory": {
+    "title": "Stair Logáil Isteach",
+    "device": "Gléas",
+    "location": "Suíomh",
+    "time": "Am",
+    "status": "Stádas",
+    "success": "Rath",
+    "failed": "Theip"
+  },
+  "chart": {
+    "title": "Anailísíocht Ábhar",
+    "views": "Radhairc",
+    "engagement": "Rannpháirtíocht"
+  },
+  "common": {
+    "loading": "Á lódáil...",
+    "error": "Tharla earráid",
+    "retry": "Bain triail eile as",
+    "refresh": "Athnuaigh",
+    "save": "Sábháil",
+    "cancel": "Cealaigh",
+    "delete": "Scrios",
+    "close": "Dún",
+    "back": "Ar ais",
+    "next": "Ar aghaidh",
+    "previous": "Roimhe Seo",
+    "noData": "Níl aon sonraí ar fáil"
+  }
+}

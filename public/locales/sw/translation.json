@@ -1,0 +1,77 @@
+{
+  "nav": {
+    "explore": "Chunguza",
+    "search": "Tafuta",
+    "trending": "Zinazovuma",
+    "favorites": "Vipendwa",
+    "history": "Historia",
+    "preferences": "Mapendeleo"
+  },
+  "feed": {
+    "title": "Mlisho wako",
+    "recommendationsTitle": "Imependekezwa kwa ajili yako",
+    "loading": "Inapakia mipasho ya ubinafsishaji...",
+    "empty": "Hakuna maudhui yanayopatikana.",
+    "newAlert": "Chapisho jipya la wakati halisi limepokelewa! Bofya ili kupakia"
+  },
+  "trending": {
+    "title": "Maudhui Yanayovuma"
+  },
+  "favorites": {
+    "title": "Vipendwa vyako",
+    "empty": "Bado hakuna vipendwa",
+    "placeholder": "Penda kadi ili upate mapendekezo yanayokufaa",
+    "clearAll": "Futa zote"
+  },
+  "search": {
+    "title": "Tafuta Maudhui",
+    "placeholder": "Tafuta filamu, muziki au habari...",
+    "noResults": "Hakuna matokeo yaliyopatikana",
+    "noResultsHint": "Jaribu neno tofauti la utafutaji",
+    "results": "matokeo"
+  },
+  "preferences": {
+    "title": "Mapendeleo ya Maudhui",
+    "theme": "Geuza Mandhari",
+    "categories": "Kategoria za Maudhui",
+    "categoriesHint": "Chagua aina za maudhui unayotaka kuona"
+  },
+  "profile": {
+    "title": "Wasifu",
+    "editProfile": "Badilisha Wasifu",
+    "save": "Hifadhi mabadiliko",
+    "name": "Jina",
+    "email": "Barua pepe",
+    "bio": "Wasifu",
+    "location": "Mahali",
+    "website": "Tovuti"
+  },
+  "loginHistory": {
+    "title": "Historia ya Kuingia",
+    "device": "Kifaa",
+    "location": "Mahali",
+    "time": "Muda",
+    "status": "Hali",
+    "success": "Mafanikio",
+    "failed": "Imeshindwa"
+  },
+  "chart": {
+    "title": "Uchanganuzi wa Maudhui",
+    "views": "Maoni",
+    "engagement": "Uchumba"
+  },
+  "common": {
+    "loading": "Inapakia...",
+    "error": "Hitilafu imetokea",
+    "retry": "Jaribu tena",
+    "refresh": "Onyesha upya",
+    "save": "Hifadhi",
+    "cancel": "Ghairi",
+    "delete": "Futa",
+    "close": "Funga",
+    "back": "Nyuma",
+    "next": "Inayofuata",
+    "previous": "Iliyotangulia",
+    "noData": "Hakuna data inayopatikana"
+  }
+}

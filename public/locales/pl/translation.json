@@ -1,0 +1,77 @@
+{
+  "nav": {
+    "explore": "Badać",
+    "search": "Szukaj",
+    "trending": "Trendy",
+    "favorites": "Ulubione",
+    "history": "Historia",
+    "preferences": "Preferencje"
+  },
+  "feed": {
+    "title": "Twój kanał",
+    "recommendationsTitle": "Polecane dla Ciebie",
+    "loading": "Ładowanie kanału personalizacji...",
+    "empty": "Brak dostępnych treści.",
+    "newAlert": "Otrzymano nowy post w czasie rzeczywistym! Kliknij, aby załadować"
+  },
+  "trending": {
+    "title": "Popularne treści"
+  },
+  "favorites": {
+    "title": "Twoje ulubione",
+    "empty": "Nie ma jeszcze ulubionych",
+    "placeholder": "Polub karty, aby otrzymywać spersonalizowane rekomendacje",
+    "clearAll": "Wyczyść wszystko"
+  },
+  "search": {
+    "title": "Przeszukaj zawartość",
+    "placeholder": "Wyszukaj filmy, muzykę lub wiadomości...",
+    "noResults": "Nie znaleziono żadnych wyników",
+    "noResultsHint": "Wypróbuj inne wyszukiwane hasło",
+    "results": "wyniki"
+  },
+  "preferences": {
+    "title": "Preferencje treści",
+    "theme": "Przełącz motyw",
+    "categories": "Kategorie treści",
+    "categoriesHint": "Wybierz typy treści, które chcesz oglądać"
+  },
+  "profile": {
+    "title": "Profil",
+    "editProfile": "Edytuj profil",
+    "save": "Zapisz zmiany",
+    "name": "Nazwa",
+    "email": "E-mail",
+    "bio": "Bio",
+    "location": "Lokalizacja",
+    "website": "Strona internetowa"
+  },
+  "loginHistory": {
+    "title": "Historia logowania",
+    "device": "Urządzenie",
+    "location": "Lokalizacja",
+    "time": "Czas",
+    "status": "Status",
+    "success": "Sukces",
+    "failed": "Przegrany"
+  },
+  "chart": {
+    "title": "Analityka treści",
+    "views": "Widoki",
+    "engagement": "Zaręczyny"
+  },
+  "common": {
+    "loading": "Załadunek...",
+    "error": "Wystąpił błąd",
+    "retry": "Spróbować ponownie",
+    "refresh": "Odświeżać",
+    "save": "Ratować",
+    "cancel": "Anulować",
+    "delete": "Usuwać",
+    "close": "Zamknąć",
+    "back": "Z powrotem",
+    "next": "Następny",
+    "previous": "Poprzedni",
+    "noData": "Brak dostępnych danych"
+  }
+}

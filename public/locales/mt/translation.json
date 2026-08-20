@@ -1,0 +1,77 @@
+{
+  "nav": {
+    "explore": "Esplora",
+    "search": "Fittex",
+    "trending": "Trending",
+    "favorites": "Favoriti",
+    "history": "Storja",
+    "preferences": "Preferenzi"
+  },
+  "feed": {
+    "title": "L-Għalf Tiegħek",
+    "recommendationsTitle": "Rakkomandat għalik",
+    "loading": "Tagħbija l-għalf tal-personalizzazzjoni...",
+    "empty": "Ebda kontenut disponibbli.",
+    "newAlert": "Post ġdid f'ħin reali riċevut! Ikklikkja biex tagħbija"
+  },
+  "trending": {
+    "title": "Kontenut Trending"
+  },
+  "favorites": {
+    "title": "Il-favoriti tiegħek",
+    "empty": "Għadu l-ebda favoriti",
+    "placeholder": "Bħal karti biex tikseb rakkomandazzjonijiet personalizzati",
+    "clearAll": "Ċara kollox"
+  },
+  "search": {
+    "title": "Fittex Kontenut",
+    "placeholder": "Fittex films, mużika, jew aħbarijiet...",
+    "noResults": "Ma nstab l-ebda riżultat",
+    "noResultsHint": "Ipprova terminu ta' tfittxija differenti",
+    "results": "riżultati"
+  },
+  "preferences": {
+    "title": "Preferenzi tal-Kontenut",
+    "theme": "Aqleb it-Tema",
+    "categories": "Kategoriji tal-Kontenut",
+    "categoriesHint": "Agħżel it-tipi ta 'kontenut li trid tara"
+  },
+  "profile": {
+    "title": "Profil",
+    "editProfile": "Editja Profil",
+    "save": "Issejvja l-bidliet",
+    "name": "Isem",
+    "email": "Email",
+    "bio": "Bio",
+    "location": "Post",
+    "website": "Websajt"
+  },
+  "loginHistory": {
+    "title": "Storja Login",
+    "device": "Apparat",
+    "location": "Post",
+    "time": "Ħin",
+    "status": "Status",
+    "success": "Suċċess",
+    "failed": "Falliet"
+  },
+  "chart": {
+    "title": "Analiżi tal-Kontenut",
+    "views": "Fehmiet",
+    "engagement": "Ingaġġ"
+  },
+  "common": {
+    "loading": "Tagħbija...",
+    "error": "Sar żball",
+    "retry": "Erġa' pprova",
+    "refresh": "Aġġorna",
+    "save": "Ħlief",
+    "cancel": "Ikkanċella",
+    "delete": "Ħassar",
+    "close": "Agħlaq",
+    "back": "Lura",
+    "next": "Li jmiss",
+    "previous": "Preċedenti",
+    "noData": "Ebda data disponibbli"
+  }
+}

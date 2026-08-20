@@ -1,0 +1,77 @@
+{
+  "nav": {
+    "explore": "Archwiliwch",
+    "search": "Chwiliwch",
+    "trending": "Tueddu",
+    "favorites": "Ffefrynnau",
+    "history": "Hanes",
+    "preferences": "Dewisiadau"
+  },
+  "feed": {
+    "title": "Eich Porthiant",
+    "recommendationsTitle": "Argymhellir i Chi",
+    "loading": "Wrthi'n llwytho porthiant personoli...",
+    "empty": "Dim cynnwys ar gael.",
+    "newAlert": "Post amser real newydd wedi'i dderbyn! Cliciwch i lwytho"
+  },
+  "trending": {
+    "title": "Cynnwys Tueddu"
+  },
+  "favorites": {
+    "title": "Eich Ffefrynnau",
+    "empty": "Dim ffefrynnau eto",
+    "placeholder": "Hoffwch gardiau i gael awgrymiadau personol",
+    "clearAll": "Clirio'r cyfan"
+  },
+  "search": {
+    "title": "Chwilio Cynnwys",
+    "placeholder": "Chwilio am ffilmiau, cerddoriaeth, neu newyddion...",
+    "noResults": "Heb ganfod canlyniadau",
+    "noResultsHint": "Rhowch gynnig ar derm chwilio gwahanol",
+    "results": "canlyniadau"
+  },
+  "preferences": {
+    "title": "Dewisiadau Cynnwys",
+    "theme": "Toglo Thema",
+    "categories": "Categorïau Cynnwys",
+    "categoriesHint": "Dewiswch y mathau o gynnwys rydych chi am ei weld"
+  },
+  "profile": {
+    "title": "Proffil",
+    "editProfile": "Golygu Proffil",
+    "save": "Cadw newidiadau",
+    "name": "Enw",
+    "email": "Ebost",
+    "bio": "Bio",
+    "location": "Lleoliad",
+    "website": "Gwefan"
+  },
+  "loginHistory": {
+    "title": "Hanes Mewngofnodi",
+    "device": "Dyfais",
+    "location": "Lleoliad",
+    "time": "Amser",
+    "status": "Statws",
+    "success": "Llwyddiant",
+    "failed": "Wedi methu"
+  },
+  "chart": {
+    "title": "Dadansoddeg Cynnwys",
+    "views": "Golygfeydd",
+    "engagement": "Ymrwymiad"
+  },
+  "common": {
+    "loading": "Wrthi'n llwytho...",
+    "error": "Digwyddodd gwall",
+    "retry": "Ceisiwch eto",
+    "refresh": "Adnewyddu",
+    "save": "Arbed",
+    "cancel": "Canslo",
+    "delete": "Dileu",
+    "close": "Cau",
+    "back": "Yn ol",
+    "next": "Nesaf",
+    "previous": "Blaenorol",
+    "noData": "Dim data ar gael"
+  }
+}

@@ -2,7 +2,7 @@ import { ContentItem } from "../store/contentSlice";
 
 const FALLBACK_NEWS_IMAGE = "https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=800";
 
-export async function fetchNews(categories: string[], search: string = ""): Promise<ContentItem[]> {
+export async function fetchNews(categories: string[], search: string = "", lang: string = "en"): Promise<ContentItem[]> {
   try {
     // Fetch for each selected category in parallel so all pills are represented.
     // However, we blacklist categories that are meant to be pure media/data feeds.
@@ -18,7 +18,8 @@ export async function fetchNews(categories: string[], search: string = ""): Prom
     const results = await Promise.allSettled(
       fetchTargets.map(async (category) => {
         let url = `/api/news?category=${category}`;
-        if (search) url += `&search=${encodeURIComponent(search)}`;
+        if (search) url += `&q=${encodeURIComponent(search)}`;
+        if (lang) url += `&lang=${encodeURIComponent(lang)}`;
 
         const response = await fetch(url);
         if (!response.ok) throw new Error(`News API error: ${response.status}`);

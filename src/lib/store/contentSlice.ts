@@ -28,6 +28,7 @@ interface ContentState {
 
 import { fetchNews } from "../services/newsApi";
 import { fetchTrendingMovies } from "../services/tmdbApi";
+import i18n from "../i18n";
 import { fetchRedditPosts } from "../services/redditApi";
 import { fetchTrendingMusic } from "../services/saavnApi";
 import { fetchTrendingSports } from "../services/footballApi";
@@ -76,22 +77,24 @@ export const fetchContent = createAsyncThunk(
       // Client-side pagination: reuse the fully fetched, sorted, and filtered list from page 0
       items = state.content.allFetchedItems;
     } else {
+      const lang = i18n.language || "en";
+
       // Fetch all sources concurrently — any single failure won't break the feed
       const [
         newsResult, moviesResult, redditResult, musicResult,
         sportsResult, forumResult, scienceResult, foodResult,
         gamingResult, animeResult,
       ] = await Promise.allSettled([
-        fetchNews(categories, search),
-        fetchTrendingMovies(movieHistoryId),
-        fetchRedditPosts(),
-        fetchTrendingMusic(musicHistoryId),
-        fetchTrendingSports(),
-        fetchTrendingForum(),
-        fetchTrendingScience(),
-        fetchTrendingFood(),
-        fetchTrendingGaming(),
-        fetchTrendingAnime(),
+        fetchNews(categories, search, lang),
+        fetchTrendingMovies(movieHistoryId, search, lang),
+        fetchRedditPosts(search, lang),
+        fetchTrendingMusic(musicHistoryId, search, lang),
+        fetchTrendingSports(search, lang),
+        fetchTrendingForum(search, lang),
+        fetchTrendingScience(search, lang),
+        fetchTrendingFood(search, lang),
+        fetchTrendingGaming(search, lang),
+        fetchTrendingAnime(search, lang),
       ]);
 
       // Push all items WITHOUT pre-flagging anything as isRecommendation.
@@ -197,19 +200,21 @@ export const fetchTrending = createAsyncThunk(
       return { items: state.content.trending, fromCache: true };
     }
 
+    const lang = i18n.language || "en";
+
     const [
       moviesResult, newsResult, musicResult, sportsResult,
       forumResult, scienceResult, foodResult, gamingResult, animeResult,
     ] = await Promise.allSettled([
-      fetchTrendingMovies(),
-      fetchNews([], ""),
-      fetchTrendingMusic(),
-      fetchTrendingSports(),
-      fetchTrendingForum(),
-      fetchTrendingScience(),
-      fetchTrendingFood(),
-      fetchTrendingGaming(),
-      fetchTrendingAnime(),
+      fetchTrendingMovies(undefined, "", lang),
+      fetchNews([], "", lang),
+      fetchTrendingMusic(undefined, "", lang),
+      fetchTrendingSports("", lang),
+      fetchTrendingForum("", lang),
+      fetchTrendingScience("", lang),
+      fetchTrendingFood("", lang),
+      fetchTrendingGaming("", lang),
+      fetchTrendingAnime("", lang),
     ]);
 
     const items: ContentItem[] = [];
@@ -276,9 +281,11 @@ const contentSlice = createSlice({
         state.loading = false;
         if (action.payload.fromCache) return; // data already in Redux, no-op
         if (action.payload.page === 0) {
-          state.items = action.payload.items;
+          // Preserve any realtime items that might have arrived before initial fetch completed
+          const realtimeItems = state.items.filter(i => i.id.startsWith("rt-"));
+          state.items = [...realtimeItems, ...action.payload.items];
           state.recommendedItems = action.payload.recommendedItems ?? [];
-          state.allFetchedItems = action.payload.allFetchedItems || [];
+          state.allFetchedItems = [...realtimeItems, ...(action.payload.allFetchedItems || [])];
         } else {
           state.items = [...state.items, ...action.payload.items];
         }

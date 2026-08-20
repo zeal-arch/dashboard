@@ -19,6 +19,7 @@ let isInitialized = false;
 export async function GET(request: NextRequest) {
   const { searchParams } = new URL(request.url);
   const historyId = searchParams.get('historyId');
+  const q = searchParams.get('q');
 
     // Search for related tracks or multiple genres based on history
 
@@ -52,23 +53,25 @@ export async function GET(request: NextRequest) {
       const randomEnglish = englishGenres.sort(() => 0.5 - Math.random()).slice(0, 5);
       const randomArtists = famousArtists.sort(() => 0.5 - Math.random()).slice(0, 5);
 
-      const queries = historyId 
-        ? [
-            `related:${historyId}`, 
-            'latest songs 2024', 
-            'new music releases today', 
-            'trending viral songs',
-            'global top 50', 
-            ...randomEnglish.slice(0, 3)
-          ] 
-        : [
-            'trending music', 
-            'global top 50', 
-            'new music releases',
-            'hip hop hits',
-            ...randomEnglish,
-            ...randomArtists
-          ];
+      const queries = q 
+        ? [q] 
+        : historyId 
+          ? [
+              `related:${historyId}`, 
+              'latest songs 2024', 
+              'new music releases today', 
+              'trending viral songs',
+              'global top 50', 
+              ...randomEnglish.slice(0, 3)
+            ] 
+          : [
+              'trending music', 
+              'global top 50', 
+              'new music releases',
+              'hip hop hits',
+              ...randomEnglish,
+              ...randomArtists
+            ];
 
       const allResultsNested = await Promise.all(
         queries.map(q => ytmusic.search(q))

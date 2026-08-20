@@ -1,0 +1,77 @@
+{
+  "nav": {
+    "explore": "Kanna",
+    "search": "Leita",
+    "trending": "Vinsælt",
+    "favorites": "Uppáhalds",
+    "history": "Saga",
+    "preferences": "Óskir"
+  },
+  "feed": {
+    "title": "Straumurinn þinn",
+    "recommendationsTitle": "Mælt með fyrir þig",
+    "loading": "Hleður sérstillingarstraumi...",
+    "empty": "Ekkert efni í boði.",
+    "newAlert": "Ný rauntímafærsla móttekin! Smelltu til að hlaða"
+  },
+  "trending": {
+    "title": "Vinsælt efni"
+  },
+  "favorites": {
+    "title": "Uppáhaldið þitt",
+    "empty": "Engin eftirlæti ennþá",
+    "placeholder": "Líkaðu við kort til að fá sérsniðnar ráðleggingar",
+    "clearAll": "Hreinsaðu allt"
+  },
+  "search": {
+    "title": "Leita að efni",
+    "placeholder": "Leitaðu að kvikmyndum, tónlist eða fréttum...",
+    "noResults": "Engar niðurstöður fundust",
+    "noResultsHint": "Prófaðu annað leitarorð",
+    "results": "niðurstöður"
+  },
+  "preferences": {
+    "title": "Efnisstillingar",
+    "theme": "Skiptu um þema",
+    "categories": "Efnisflokkar",
+    "categoriesHint": "Veldu tegundir efnis sem þú vilt sjá"
+  },
+  "profile": {
+    "title": "Prófíll",
+    "editProfile": "Breyta prófíl",
+    "save": "Vista breytingar",
+    "name": "Nafn",
+    "email": "Tölvupóstur",
+    "bio": "Bio",
+    "location": "Staðsetning",
+    "website": "Vefsíða"
+  },
+  "loginHistory": {
+    "title": "Innskráningarsaga",
+    "device": "Tæki",
+    "location": "Staðsetning",
+    "time": "Tími",
+    "status": "Staða",
+    "success": "Árangur",
+    "failed": "Mistókst"
+  },
+  "chart": {
+    "title": "Efnisgreining",
+    "views": "Útsýni",
+    "engagement": "Trúlofun"
+  },
+  "common": {
+    "loading": "Hleður...",
+    "error": "Villa kom upp",
+    "retry": "Reyndu aftur",
+    "refresh": "Endurnýja",
+    "save": "Vista",
+    "cancel": "Hætta við",
+    "delete": "Eyða",
+    "close": "Loka",
+    "back": "Til baka",
+    "next": "Næst",
+    "previous": "Fyrri",
+    "noData": "Engin gögn tiltæk"
+  }
+}

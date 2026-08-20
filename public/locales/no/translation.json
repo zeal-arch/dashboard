@@ -1,0 +1,77 @@
+{
+  "nav": {
+    "explore": "Utforske",
+    "search": "Søk",
+    "trending": "På vei opp",
+    "favorites": "Favoritter",
+    "history": "Historie",
+    "preferences": "Preferanser"
+  },
+  "feed": {
+    "title": "Din feed",
+    "recommendationsTitle": "Anbefalt for deg",
+    "loading": "Laster inn personaliseringsfeed ...",
+    "empty": "Ingen innhold tilgjengelig.",
+    "newAlert": "Nytt sanntidsinnlegg mottatt! Klikk for å laste"
+  },
+  "trending": {
+    "title": "Populært innhold"
+  },
+  "favorites": {
+    "title": "Dine favoritter",
+    "empty": "Ingen favoritter ennå",
+    "placeholder": "Lik kort for å få personlige anbefalinger",
+    "clearAll": "Fjern alle"
+  },
+  "search": {
+    "title": "Søk etter innhold",
+    "placeholder": "Søk etter filmer, musikk eller nyheter...",
+    "noResults": "Ingen resultater funnet",
+    "noResultsHint": "Prøv et annet søkeord",
+    "results": "resultater"
+  },
+  "preferences": {
+    "title": "Innholdsinnstillinger",
+    "theme": "Slå av/på tema",
+    "categories": "Innholdskategorier",
+    "categoriesHint": "Velg innholdstypene du vil se"
+  },
+  "profile": {
+    "title": "Profil",
+    "editProfile": "Rediger profil",
+    "save": "Lagre endringer",
+    "name": "Navn",
+    "email": "E-post",
+    "bio": "Bio",
+    "location": "Sted",
+    "website": "Nettsted"
+  },
+  "loginHistory": {
+    "title": "Logg inn historikk",
+    "device": "Enhet",
+    "location": "Sted",
+    "time": "Tid",
+    "status": "Status",
+    "success": "Suksess",
+    "failed": "Mislyktes"
+  },
+  "chart": {
+    "title": "Innholdsanalyse",
+    "views": "Visninger",
+    "engagement": "Engasjement"
+  },
+  "common": {
+    "loading": "Laster inn...",
+    "error": "Det oppstod en feil",
+    "retry": "Prøv på nytt",
+    "refresh": "Forfriske",
+    "save": "Spare",
+    "cancel": "Kansellere",
+    "delete": "Slett",
+    "close": "Lukke",
+    "back": "Tilbake",
+    "next": "Neste",
+    "previous": "Tidligere",
+    "noData": "Ingen data tilgjengelig"
+  }
+}

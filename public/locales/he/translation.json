@@ -1,0 +1,77 @@
+{
+  "nav": {
+    "explore": "לַחקוֹר",
+    "search": "לְחַפֵּשׂ",
+    "trending": "מגמות",
+    "favorites": "מועדפים",
+    "history": "הִיסטוֹרִיָה",
+    "preferences": "העדפות"
+  },
+  "feed": {
+    "title": "הפיד שלך",
+    "recommendationsTitle": "מומלץ עבורך",
+    "loading": "טוען עדכון התאמה אישית...",
+    "empty": "אין תוכן זמין.",
+    "newAlert": "פוסט חדש בזמן אמת התקבל! לחץ לטעינה"
+  },
+  "trending": {
+    "title": "תוכן פופולרי"
+  },
+  "favorites": {
+    "title": "המועדפים שלך",
+    "empty": "עדיין אין מועדפים",
+    "placeholder": "כמו כרטיסים כדי לקבל המלצות מותאמות אישית",
+    "clearAll": "נקה הכל"
+  },
+  "search": {
+    "title": "חיפוש תוכן",
+    "placeholder": "חפש סרטים, מוזיקה או חדשות...",
+    "noResults": "לא נמצאו תוצאות",
+    "noResultsHint": "נסה מונח חיפוש אחר",
+    "results": "תוצאות"
+  },
+  "preferences": {
+    "title": "העדפות תוכן",
+    "theme": "החלף ערכת נושא",
+    "categories": "קטגוריות תוכן",
+    "categoriesHint": "בחר את סוגי התוכן שברצונך לראות"
+  },
+  "profile": {
+    "title": "פּרוֹפִיל",
+    "editProfile": "ערוך פרופיל",
+    "save": "שמור שינויים",
+    "name": "שֵׁם",
+    "email": "אֶלֶקטרוֹנִי",
+    "bio": "ביו",
+    "location": "מִקוּם",
+    "website": "אֲתַר אִינטֶרנֶט"
+  },
+  "loginHistory": {
+    "title": "היסטוריית כניסה",
+    "device": "הֶתקֵן",
+    "location": "מִקוּם",
+    "time": "זְמַן",
+    "status": "סטָטוּס",
+    "success": "הַצלָחָה",
+    "failed": "נִכשָׁל"
+  },
+  "chart": {
+    "title": "ניתוח תוכן",
+    "views": "צפיות",
+    "engagement": "אירוסין"
+  },
+  "common": {
+    "loading": "טְעִינָה...",
+    "error": "אירעה שגיאה",
+    "retry": "נסה שוב",
+    "refresh": "לְרַעֲנֵן",
+    "save": "לְהַצִיל",
+    "cancel": "לְבַטֵל",
+    "delete": "לִמְחוֹק",
+    "close": "לִסְגוֹר",
+    "back": "בְּחֲזָרָה",
+    "next": "הַבָּא",
+    "previous": "קוֹדֵם",
+    "noData": "אין נתונים זמינים"
+  }
+}

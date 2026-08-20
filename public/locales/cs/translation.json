@@ -1,0 +1,77 @@
+{
+  "nav": {
+    "explore": "Prozkoumat",
+    "search": "Vyhledávání",
+    "trending": "Trendy",
+    "favorites": "Oblíbené",
+    "history": "Dějiny",
+    "preferences": "Předvolby"
+  },
+  "feed": {
+    "title": "Váš zdroj",
+    "recommendationsTitle": "Doporučeno pro vás",
+    "loading": "Načítání zdroje přizpůsobení...",
+    "empty": "Není k dispozici žádný obsah.",
+    "newAlert": "Byl přijat nový příspěvek v reálném čase! Kliknutím načtete"
+  },
+  "trending": {
+    "title": "Populární obsah"
+  },
+  "favorites": {
+    "title": "Vaši oblíbení",
+    "empty": "Zatím žádné oblíbené",
+    "placeholder": "Líbí se mi karty, abyste získali personalizovaná doporučení",
+    "clearAll": "Vymazat vše"
+  },
+  "search": {
+    "title": "Hledat obsah",
+    "placeholder": "Vyhledávejte filmy, hudbu nebo zprávy...",
+    "noResults": "Nebyly nalezeny žádné výsledky",
+    "noResultsHint": "Zkuste jiný hledaný výraz",
+    "results": "výsledky"
+  },
+  "preferences": {
+    "title": "Předvolby obsahu",
+    "theme": "Přepnout motiv",
+    "categories": "Kategorie obsahu",
+    "categoriesHint": "Vyberte typy obsahu, který chcete vidět"
+  },
+  "profile": {
+    "title": "Profil",
+    "editProfile": "Upravit profil",
+    "save": "Uložit změny",
+    "name": "Jméno",
+    "email": "E-mail",
+    "bio": "Bio",
+    "location": "Umístění",
+    "website": "webové stránky"
+  },
+  "loginHistory": {
+    "title": "Historie přihlášení",
+    "device": "Zařízení",
+    "location": "Umístění",
+    "time": "Čas",
+    "status": "Postavení",
+    "success": "Úspěch",
+    "failed": "Nepodařilo se"
+  },
+  "chart": {
+    "title": "Analýza obsahu",
+    "views": "Pohledy",
+    "engagement": "Zasnoubení"
+  },
+  "common": {
+    "loading": "Načítání...",
+    "error": "Došlo k chybě",
+    "retry": "Zkuste to znovu",
+    "refresh": "Obnovit",
+    "save": "Uložit",
+    "cancel": "Zrušit",
+    "delete": "Vymazat",
+    "close": "Blízko",
+    "back": "Zadní",
+    "next": "Další",
+    "previous": "Předchozí",
+    "noData": "Nejsou k dispozici žádné údaje"
+  }
+}

@@ -11,8 +11,14 @@ interface JikanAnime {
   aired?: { from?: string };
 }
 
-export async function fetchTrendingAnime(): Promise<ContentItem[]> {
-  const response = await fetch("/api/anime");
+export async function fetchTrendingAnime(search: string = "", lang: string = "en"): Promise<ContentItem[]> {
+  const baseUrl = "/api/anime".split('?')[0];
+    const existingQuery = "/api/anime".split('?')[1] || '';
+    const queryParams = new URLSearchParams(existingQuery);
+    if (search) queryParams.append("q", search);
+    if (lang) queryParams.append("lang", lang);
+    const finalUrl = baseUrl + "?" + queryParams.toString();
+    const response = await fetch(finalUrl);
   if (!response.ok) return [];
   const json = await response.json();
   if (!Array.isArray(json.anime)) return [];

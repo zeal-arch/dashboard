@@ -1,0 +1,77 @@
+{
+  "nav": {
+    "explore": "Istražiti",
+    "search": "Pretraživanje",
+    "trending": "U trendu",
+    "favorites": "Favoriti",
+    "history": "Povijest",
+    "preferences": "Postavke"
+  },
+  "feed": {
+    "title": "Vaš feed",
+    "recommendationsTitle": "Preporučeno za Vas",
+    "loading": "Učitavanje feeda za personalizaciju...",
+    "empty": "Nema dostupnog sadržaja.",
+    "newAlert": "Primljena nova objava u stvarnom vremenu! Kliknite za učitavanje"
+  },
+  "trending": {
+    "title": "Sadržaj u trendu"
+  },
+  "favorites": {
+    "title": "Vaši favoriti",
+    "empty": "Još nema favorita",
+    "placeholder": "Lajkajte kartice da biste dobili personalizirane preporuke",
+    "clearAll": "Obriši sve"
+  },
+  "search": {
+    "title": "Pretraži sadržaj",
+    "placeholder": "Tražite filmove, glazbu ili vijesti...",
+    "noResults": "Nema pronađenih rezultata",
+    "noResultsHint": "Pokušajte s drugim pojmom za pretraživanje",
+    "results": "rezultate"
+  },
+  "preferences": {
+    "title": "Postavke sadržaja",
+    "theme": "Uključi/isključi temu",
+    "categories": "Kategorije sadržaja",
+    "categoriesHint": "Odaberite vrste sadržaja koje želite vidjeti"
+  },
+  "profile": {
+    "title": "Profil",
+    "editProfile": "Uredi profil",
+    "save": "Spremite promjene",
+    "name": "Ime",
+    "email": "E-mail",
+    "bio": "Bio",
+    "location": "Mjesto",
+    "website": "Web stranica"
+  },
+  "loginHistory": {
+    "title": "Povijest prijave",
+    "device": "Uređaj",
+    "location": "Mjesto",
+    "time": "Vrijeme",
+    "status": "Status",
+    "success": "Uspjeh",
+    "failed": "neuspješno"
+  },
+  "chart": {
+    "title": "Analitika sadržaja",
+    "views": "Pogledi",
+    "engagement": "Angažman"
+  },
+  "common": {
+    "loading": "Učitavanje...",
+    "error": "Došlo je do pogreške",
+    "retry": "Pokušaj ponovo",
+    "refresh": "Osvježiti",
+    "save": "Uštedjeti",
+    "cancel": "Otkazati",
+    "delete": "Izbrisati",
+    "close": "Zatvoriti",
+    "back": "Nazad",
+    "next": "Sljedeći",
+    "previous": "Prethodno",
+    "noData": "Nema dostupnih podataka"
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "nav": {
+    "explore": "탐구하다",
+    "search": "찾다",
+    "trending": "인기 급상승",
+    "favorites": "즐겨찾기",
+    "history": "역사",
+    "preferences": "환경설정"
+  },
+  "feed": {
+    "title": "귀하의 피드",
+    "recommendationsTitle": "당신에게 추천",
+    "loading": "맞춤설정 피드 로드 중...",
+    "empty": "사용 가능한 콘텐츠가 없습니다.",
+    "newAlert": "새로운 실시간 게시물이 접수되었습니다! 로드하려면 클릭하세요."
+  },
+  "trending": {
+    "title": "인기 콘텐츠"
+  },
+  "favorites": {
+    "title": "즐겨찾기",
+    "empty": "아직 즐겨찾기가 없습니다.",
+    "placeholder": "맞춤 추천을 받으려면 카드에 '좋아요'를 누르세요.",
+    "clearAll": "모두 지우기"
+  },
+  "search": {
+    "title": "콘텐츠 검색",
+    "placeholder": "영화, 음악, 뉴스를 검색하세요...",
+    "noResults": "검색결과가 없습니다",
+    "noResultsHint": "다른 검색어를 사용해 보세요.",
+    "results": "결과"
+  },
+  "preferences": {
+    "title": "콘텐츠 환경설정",
+    "theme": "테마 전환",
+    "categories": "콘텐츠 카테고리",
+    "categoriesHint": "보고 싶은 콘텐츠 유형을 선택하세요."
+  },
+  "profile": {
+    "title": "윤곽",
+    "editProfile": "프로필 편집",
+    "save": "변경사항 저장",
+    "name": "이름",
+    "email": "이메일",
+    "bio": "바이오",
+    "location": "위치",
+    "website": "웹사이트"
+  },
+  "loginHistory": {
+    "title": "로그인 기록",
+    "device": "장치",
+    "location": "위치",
+    "time": "시간",
+    "status": "상태",
+    "success": "성공",
+    "failed": "실패한"
+  },
+  "chart": {
+    "title": "콘텐츠 분석",
+    "views": "조회수",
+    "engagement": "약혼"
+  },
+  "common": {
+    "loading": "로드 중...",
+    "error": "오류가 발생했습니다",
+    "retry": "다시 해 보다",
+    "refresh": "새로 고치다",
+    "save": "구하다",
+    "cancel": "취소",
+    "delete": "삭제",
+    "close": "닫다",
+    "back": "뒤쪽에",
+    "next": "다음",
+    "previous": "이전의",
+    "noData": "사용 가능한 데이터가 없습니다."
+  }
+}

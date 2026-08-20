@@ -1,0 +1,77 @@
+{
+  "nav": {
+    "explore": "Khám phá",
+    "search": "Tìm kiếm",
+    "trending": "Đang thịnh hành",
+    "favorites": "Yêu thích",
+    "history": "Lịch sử",
+    "preferences": "Tùy chọn"
+  },
+  "feed": {
+    "title": "Nguồn cấp dữ liệu của bạn",
+    "recommendationsTitle": "Đề xuất cho bạn",
+    "loading": "Đang tải nguồn cấp dữ liệu cá nhân hóa...",
+    "empty": "Không có nội dung có sẵn.",
+    "newAlert": "Đã nhận được bài đăng thời gian thực mới! Bấm để tải"
+  },
+  "trending": {
+    "title": "Nội dung thịnh hành"
+  },
+  "favorites": {
+    "title": "Yêu thích của bạn",
+    "empty": "Chưa có mục yêu thích nào",
+    "placeholder": "Thích thẻ để nhận đề xuất được cá nhân hóa",
+    "clearAll": "Xóa tất cả"
+  },
+  "search": {
+    "title": "Tìm kiếm nội dung",
+    "placeholder": "Tìm kiếm phim, nhạc hoặc tin tức...",
+    "noResults": "Không tìm thấy kết quả nào",
+    "noResultsHint": "Hãy thử một cụm từ tìm kiếm khác",
+    "results": "kết quả"
+  },
+  "preferences": {
+    "title": "Tùy chọn nội dung",
+    "theme": "Chuyển đổi chủ đề",
+    "categories": "Danh mục nội dung",
+    "categoriesHint": "Chọn loại nội dung bạn muốn xem"
+  },
+  "profile": {
+    "title": "Hồ sơ",
+    "editProfile": "Chỉnh sửa hồ sơ",
+    "save": "Lưu thay đổi",
+    "name": "Tên",
+    "email": "E-mail",
+    "bio": "Tiểu sử",
+    "location": "Vị trí",
+    "website": "Trang web"
+  },
+  "loginHistory": {
+    "title": "Lịch sử đăng nhập",
+    "device": "Thiết bị",
+    "location": "Vị trí",
+    "time": "Thời gian",
+    "status": "Trạng thái",
+    "success": "Thành công",
+    "failed": "Thất bại"
+  },
+  "chart": {
+    "title": "Phân tích nội dung",
+    "views": "Lượt xem",
+    "engagement": "Hôn ước"
+  },
+  "common": {
+    "loading": "Đang tải...",
+    "error": "Đã xảy ra lỗi",
+    "retry": "Thử lại",
+    "refresh": "Làm cho khỏe lại",
+    "save": "Cứu",
+    "cancel": "Hủy bỏ",
+    "delete": "Xóa bỏ",
+    "close": "Đóng",
+    "back": "Mặt sau",
+    "next": "Kế tiếp",
+    "previous": "Trước",
+    "noData": "Không có sẵn dữ liệu"
+  }
+}

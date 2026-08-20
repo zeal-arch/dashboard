@@ -14,8 +14,14 @@ interface GameRecord {
   release_date?: string;
 }
 
-export async function fetchTrendingGaming(): Promise<ContentItem[]> {
-  const response = await fetch("/api/gaming");
+export async function fetchTrendingGaming(search: string = "", lang: string = "en"): Promise<ContentItem[]> {
+  const baseUrl = "/api/gaming".split('?')[0];
+    const existingQuery = "/api/gaming".split('?')[1] || '';
+    const queryParams = new URLSearchParams(existingQuery);
+    if (search) queryParams.append("q", search);
+    if (lang) queryParams.append("lang", lang);
+    const finalUrl = baseUrl + "?" + queryParams.toString();
+    const response = await fetch(finalUrl);
   if (!response.ok) return [];
   const json = await response.json();
   if (!Array.isArray(json.games)) return [];

@@ -1,0 +1,77 @@
+{
+  "nav": {
+    "explore": "探索",
+    "search": "搜索",
+    "trending": "流行趋势",
+    "favorites": "收藏夹",
+    "history": "历史",
+    "preferences": "偏好设置"
+  },
+  "feed": {
+    "title": "您的动态",
+    "recommendationsTitle": "为您推荐",
+    "loading": "正在加载个性化提要...",
+    "empty": "无可用内容。",
+    "newAlert": "收到新的实时帖子！点击加载"
+  },
+  "trending": {
+    "title": "热门内容"
+  },
+  "favorites": {
+    "title": "您的最爱",
+    "empty": "还没有收藏夹",
+    "placeholder": "点赞卡片以获得个性化推荐",
+    "clearAll": "全部清除"
+  },
+  "search": {
+    "title": "搜索内容",
+    "placeholder": "搜索电影、音乐或新闻...",
+    "noResults": "没有找到结果",
+    "noResultsHint": "尝试不同的搜索词",
+    "results": "结果"
+  },
+  "preferences": {
+    "title": "内容偏好",
+    "theme": "切换主题",
+    "categories": "内容类别",
+    "categoriesHint": "选择您想查看的内容类型"
+  },
+  "profile": {
+    "title": "轮廓",
+    "editProfile": "编辑个人资料",
+    "save": "保存更改",
+    "name": "姓名",
+    "email": "电子邮件",
+    "bio": "简介",
+    "location": "地点",
+    "website": "网站"
+  },
+  "loginHistory": {
+    "title": "登录记录",
+    "device": "设备",
+    "location": "地点",
+    "time": "时间",
+    "status": "地位",
+    "success": "成功",
+    "failed": "失败的"
+  },
+  "chart": {
+    "title": "内容分析",
+    "views": "意见",
+    "engagement": "订婚"
+  },
+  "common": {
+    "loading": "加载中...",
+    "error": "发生错误",
+    "retry": "重试",
+    "refresh": "刷新",
+    "save": "节省",
+    "cancel": "取消",
+    "delete": "删除",
+    "close": "关闭",
+    "back": "后退",
+    "next": "下一个",
+    "previous": "以前的",
+    "noData": "无可用数据"
+  }
+}

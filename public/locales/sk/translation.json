@@ -1,0 +1,77 @@
+{
+  "nav": {
+    "explore": "Preskúmajte",
+    "search": "Hľadať",
+    "trending": "Trendy",
+    "favorites": "Obľúbené",
+    "history": "História",
+    "preferences": "Predvoľby"
+  },
+  "feed": {
+    "title": "Váš informačný kanál",
+    "recommendationsTitle": "Odporúčané pre vás",
+    "loading": "Načítava sa informačný kanál prispôsobenia...",
+    "empty": "Nie je k dispozícii žiadny obsah.",
+    "newAlert": "Bol prijatý nový príspevok v reálnom čase! Kliknutím načítajte"
+  },
+  "trending": {
+    "title": "Populárny obsah"
+  },
+  "favorites": {
+    "title": "Vaše obľúbené",
+    "empty": "Zatiaľ žiadne obľúbené",
+    "placeholder": "Označte, že sa mi páčia karty a získajte prispôsobené odporúčania",
+    "clearAll": "Vymazať všetko"
+  },
+  "search": {
+    "title": "Hľadať obsah",
+    "placeholder": "Hľadajte filmy, hudbu alebo správy...",
+    "noResults": "Nenašli sa žiadne výsledky",
+    "noResultsHint": "Skúste iný hľadaný výraz",
+    "results": "výsledky"
+  },
+  "preferences": {
+    "title": "Predvoľby obsahu",
+    "theme": "Prepnúť tému",
+    "categories": "Kategórie obsahu",
+    "categoriesHint": "Vyberte typy obsahu, ktorý chcete vidieť"
+  },
+  "profile": {
+    "title": "Profil",
+    "editProfile": "Upraviť profil",
+    "save": "Uložte zmeny",
+    "name": "Meno",
+    "email": "Email",
+    "bio": "Bio",
+    "location": "Poloha",
+    "website": "webové stránky"
+  },
+  "loginHistory": {
+    "title": "História prihlásenia",
+    "device": "Zariadenie",
+    "location": "Poloha",
+    "time": "čas",
+    "status": "Stav",
+    "success": "Úspech",
+    "failed": "Nepodarilo sa"
+  },
+  "chart": {
+    "title": "Analýza obsahu",
+    "views": "Zobrazenia",
+    "engagement": "Zasnúbenie"
+  },
+  "common": {
+    "loading": "Načítava sa...",
+    "error": "Vyskytla sa chyba",
+    "retry": "Skúste to znova",
+    "refresh": "Obnoviť",
+    "save": "Uložiť",
+    "cancel": "Zrušiť",
+    "delete": "Odstrániť",
+    "close": "Zavrieť",
+    "back": "Späť",
+    "next": "Ďalej",
+    "previous": "Predchádzajúce",
+    "noData": "Nie sú k dispozícii žiadne údaje"
+  }
+}

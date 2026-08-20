@@ -1,0 +1,77 @@
+{
+  "nav": {
+    "explore": "Explorer",
+    "search": "Recherche",
+    "trending": "Tendance",
+    "favorites": "Favoris",
+    "history": "Histoire",
+    "preferences": "Préférences"
+  },
+  "feed": {
+    "title": "Votre flux",
+    "recommendationsTitle": "Recommandé pour vous",
+    "loading": "Chargement du flux de personnalisation...",
+    "empty": "Aucun contenu disponible.",
+    "newAlert": "Nouveau post en temps réel reçu ! Cliquez pour charger"
+  },
+  "trending": {
+    "title": "Contenu tendance"
+  },
+  "favorites": {
+    "title": "Vos favoris",
+    "empty": "Pas encore de favoris",
+    "placeholder": "Aimez les cartes pour obtenir des recommandations personnalisées",
+    "clearAll": "Tout effacer"
+  },
+  "search": {
+    "title": "Rechercher du contenu",
+    "placeholder": "Recherchez des films, de la musique ou des actualités...",
+    "noResults": "Aucun résultat trouvé",
+    "noResultsHint": "Essayez un autre terme de recherche",
+    "results": "résultats"
+  },
+  "preferences": {
+    "title": "Préférences de contenu",
+    "theme": "Basculer le thème",
+    "categories": "Catégories de contenu",
+    "categoriesHint": "Sélectionnez les types de contenu que vous souhaitez voir"
+  },
+  "profile": {
+    "title": "Profil",
+    "editProfile": "Modifier le profil",
+    "save": "Enregistrer les modifications",
+    "name": "Nom",
+    "email": "E-mail",
+    "bio": "Biographie",
+    "location": "Emplacement",
+    "website": "Site web"
+  },
+  "loginHistory": {
+    "title": "Historique de connexion",
+    "device": "Appareil",
+    "location": "Emplacement",
+    "time": "Temps",
+    "status": "Statut",
+    "success": "Succès",
+    "failed": "Échoué"
+  },
+  "chart": {
+    "title": "Analyse de contenu",
+    "views": "Vues",
+    "engagement": "Fiançailles"
+  },
+  "common": {
+    "loading": "Chargement...",
+    "error": "Une erreur s'est produite",
+    "retry": "Réessayer",
+    "refresh": "Rafraîchir",
+    "save": "Sauvegarder",
+    "cancel": "Annuler",
+    "delete": "Supprimer",
+    "close": "Fermer",
+    "back": "Dos",
+    "next": "Suivant",
+    "previous": "Précédent",
+    "noData": "Aucune donnée disponible"
+  }
+}

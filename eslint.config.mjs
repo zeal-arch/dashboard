@@ -17,6 +17,9 @@ const eslintConfig = defineConfig([
     "public/sw.js.map",
     // Vendored third-party hooks (unmodified source)
     "src/hooks/usehooks/**",
+    // Node.js utility scripts (not part of the Next.js app bundle)
+    "generate-translations.js",
+    "test-translate.js",
   ]),
   {
     rules: {

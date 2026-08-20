@@ -1,0 +1,77 @@
+{
+  "nav": {
+    "explore": "Verken",
+    "search": "Soek",
+    "trending": "Trending",
+    "favorites": "Gunstelinge",
+    "history": "Geskiedenis",
+    "preferences": "Voorkeure"
+  },
+  "feed": {
+    "title": "Jou voer",
+    "recommendationsTitle": "Vir jou aanbeveel",
+    "loading": "Laai tans personaliseringstroom …",
+    "empty": "Geen inhoud beskikbaar nie.",
+    "newAlert": "Nuwe intydse pos ontvang! Klik om te laai"
+  },
+  "trending": {
+    "title": "Trending inhoud"
+  },
+  "favorites": {
+    "title": "Jou gunstelinge",
+    "empty": "Nog geen gunstelinge nie",
+    "placeholder": "Hou van kaarte om gepersonaliseerde aanbevelings te kry",
+    "clearAll": "Vee alles uit"
+  },
+  "search": {
+    "title": "Soek inhoud",
+    "placeholder": "Soek vir flieks, musiek of nuus...",
+    "noResults": "Geen resultate gevind nie",
+    "noResultsHint": "Probeer 'n ander soekterm",
+    "results": "resultate"
+  },
+  "preferences": {
+    "title": "Inhoudvoorkeure",
+    "theme": "Wissel Tema",
+    "categories": "Inhoudkategorieë",
+    "categoriesHint": "Kies die tipe inhoud wat jy wil sien"
+  },
+  "profile": {
+    "title": "Profiel",
+    "editProfile": "Wysig profiel",
+    "save": "Stoor veranderinge",
+    "name": "Naam",
+    "email": "E-pos",
+    "bio": "Bio",
+    "location": "Ligging",
+    "website": "Webwerf"
+  },
+  "loginHistory": {
+    "title": "Teken Geskiedenis",
+    "device": "Toestel",
+    "location": "Ligging",
+    "time": "Tyd",
+    "status": "Status",
+    "success": "Sukses",
+    "failed": "Misluk"
+  },
+  "chart": {
+    "title": "Inhoudanalise",
+    "views": "Uitsigte",
+    "engagement": "Verlowing"
+  },
+  "common": {
+    "loading": "Laai tans...",
+    "error": "'n Fout het voorgekom",
+    "retry": "Probeer weer",
+    "refresh": "Verfris",
+    "save": "Stoor",
+    "cancel": "Kanselleer",
+    "delete": "Vee uit",
+    "close": "Maak toe",
+    "back": "Terug",
+    "next": "Volgende",
+    "previous": "Vorige",
+    "noData": "Geen data beskikbaar nie"
+  }
+}

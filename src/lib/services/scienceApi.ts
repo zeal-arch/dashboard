@@ -2,8 +2,14 @@ import { ContentItem } from "../store/contentSlice";
 
 interface SpacecraftRecord { id: number; name: string; }
 
-export async function fetchTrendingScience(): Promise<ContentItem[]> {
-  const response = await fetch("/api/science");
+export async function fetchTrendingScience(search: string = "", lang: string = "en"): Promise<ContentItem[]> {
+  const baseUrl = "/api/science".split('?')[0];
+    const existingQuery = "/api/science".split('?')[1] || '';
+    const queryParams = new URLSearchParams(existingQuery);
+    if (search) queryParams.append("q", search);
+    if (lang) queryParams.append("lang", lang);
+    const finalUrl = baseUrl + "?" + queryParams.toString();
+    const response = await fetch(finalUrl);
   if (!response.ok) return [];
   const json = await response.json();
   if (!Array.isArray(json.spacecrafts)) return [];

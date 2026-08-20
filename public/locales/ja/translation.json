@@ -1,0 +1,77 @@
+{
+  "nav": {
+    "explore": "探検する",
+    "search": "検索",
+    "trending": "トレンド",
+    "favorites": "お気に入り",
+    "history": "歴史",
+    "preferences": "設定"
+  },
+  "feed": {
+    "title": "あなたのフィード",
+    "recommendationsTitle": "あなたにおすすめ",
+    "loading": "パーソナライズフィードを読み込んでいます...",
+    "empty": "利用可能なコンテンツはありません。",
+    "newAlert": "新しいリアルタイム投稿を受け取りました！クリックしてロード"
+  },
+  "trending": {
+    "title": "トレンドコンテンツ"
+  },
+  "favorites": {
+    "title": "Your Favorites",
+    "empty": "No favorites yet",
+    "placeholder": "Like cards to get personalized recommendations",
+    "clearAll": "Clear all"
+  },
+  "search": {
+    "title": "Search Content",
+    "placeholder": "映画、音楽、ニュースを検索します...",
+    "noResults": "結果が見つかりませんでした",
+    "noResultsHint": "別の検索語を試してください",
+    "results": "結果"
+  },
+  "preferences": {
+    "title": "コンテンツの設定",
+    "theme": "テーマの切り替え",
+    "categories": "コンテンツカテゴリ",
+    "categoriesHint": "見たいコンテンツの種類を選択してください"
+  },
+  "profile": {
+    "title": "プロフィール",
+    "editProfile": "プロフィールの編集",
+    "save": "変更を保存する",
+    "name": "名前",
+    "email": "電子メール",
+    "bio": "バイオ",
+    "location": "位置",
+    "website": "Webサイト"
+  },
+  "loginHistory": {
+    "title": "ログイン履歴",
+    "device": "デバイス",
+    "location": "位置",
+    "time": "時間",
+    "status": "状態",
+    "success": "成功",
+    "failed": "失敗した"
+  },
+  "chart": {
+    "title": "コンテンツ分析",
+    "views": "ビュー",
+    "engagement": "婚約"
+  },
+  "common": {
+    "loading": "読み込み中...",
+    "error": "エラーが発生しました",
+    "retry": "リトライ",
+    "refresh": "リフレッシュ",
+    "save": "保存",
+    "cancel": "キャンセル",
+    "delete": "消去",
+    "close": "近い",
+    "back": "戻る",
+    "next": "次",
+    "previous": "前の",
+    "noData": "利用可能なデータがありません"
+  }
+}

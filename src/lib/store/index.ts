@@ -1,5 +1,6 @@
 import { configureStore, combineReducers } from "@reduxjs/toolkit";
 import { persistStore, persistReducer, FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER } from "redux-persist";
+import type { PersistedState } from "redux-persist";
 import createWebStorage from "redux-persist/lib/storage/createWebStorage";
 import preferencesReducer from "./preferencesSlice";
 import contentReducer from "./contentSlice";
@@ -26,28 +27,25 @@ export const persistConfig = {
   storage,
   version: 3, // bump this to clear/migrate old schema
   whitelist: ["preferences", "favorites"],
-  migrate: (state: any) => {
-    if (state && state.favorites) {
-      const fav = state.favorites;
+  migrate: (state: PersistedState): Promise<PersistedState> => {
+    if (state && (state as Record<string, unknown>).favorites) {
+      const fav = (state as Record<string, unknown>).favorites as { items?: unknown[] } | unknown[];
       // Handle migrating from legacy array-based favorites
       if (Array.isArray(fav)) {
         return Promise.resolve({
           ...state,
           favorites: {
             items: fav,
-            ids: fav.map((i: any) => i.id || ""),
+            ids: (fav as { id?: string }[]).map((i) => i.id ?? ""),
           },
-        });
+        } as PersistedState);
       }
       // Handle corrupt favorites structure lacking `items` array
-      if (!fav.items || !Array.isArray(fav.items)) {
+      if (!Array.isArray((fav as { items?: unknown[] }).items)) {
         return Promise.resolve({
           ...state,
-          favorites: {
-            items: [],
-            ids: [],
-          },
-        });
+          favorites: { items: [], ids: [] },
+        } as PersistedState);
       }
     }
     return Promise.resolve(state);

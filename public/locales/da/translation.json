@@ -1,0 +1,77 @@
+{
+  "nav": {
+    "explore": "Udforske",
+    "search": "Søge",
+    "trending": "Trending",
+    "favorites": "Favoritter",
+    "history": "Historie",
+    "preferences": "Præferencer"
+  },
+  "feed": {
+    "title": "Dit feed",
+    "recommendationsTitle": "Anbefalet til dig",
+    "loading": "Indlæser tilpasningsfeed...",
+    "empty": "Intet indhold tilgængeligt.",
+    "newAlert": "Nyt post i realtid modtaget! Klik for at indlæse"
+  },
+  "trending": {
+    "title": "Trending indhold"
+  },
+  "favorites": {
+    "title": "Dine favoritter",
+    "empty": "Ingen favoritter endnu",
+    "placeholder": "Like kort for at få personlige anbefalinger",
+    "clearAll": "Ryd alle"
+  },
+  "search": {
+    "title": "Søg efter indhold",
+    "placeholder": "Søg efter film, musik eller nyheder...",
+    "noResults": "Ingen resultater fundet",
+    "noResultsHint": "Prøv et andet søgeord",
+    "results": "resultater"
+  },
+  "preferences": {
+    "title": "Indholdspræferencer",
+    "theme": "Skift tema",
+    "categories": "Indholdskategorier",
+    "categoriesHint": "Vælg de typer indhold, du vil se"
+  },
+  "profile": {
+    "title": "Profil",
+    "editProfile": "Rediger profil",
+    "save": "Gem ændringer",
+    "name": "Navn",
+    "email": "E-mail",
+    "bio": "Bio",
+    "location": "Beliggenhed",
+    "website": "Website"
+  },
+  "loginHistory": {
+    "title": "Log ind historie",
+    "device": "Enhed",
+    "location": "Beliggenhed",
+    "time": "Tid",
+    "status": "Status",
+    "success": "Succes",
+    "failed": "Mislykkedes"
+  },
+  "chart": {
+    "title": "Indholdsanalyse",
+    "views": "Visninger",
+    "engagement": "Engagement"
+  },
+  "common": {
+    "loading": "Indlæser...",
+    "error": "Der opstod en fejl",
+    "retry": "Prøv igen",
+    "refresh": "Opfriske",
+    "save": "Spare",
+    "cancel": "Ophæve",
+    "delete": "Slet",
+    "close": "Tæt",
+    "back": "Tilbage",
+    "next": "Næste",
+    "previous": "Tidligere",
+    "noData": "Ingen tilgængelige data"
+  }
+}

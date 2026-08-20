@@ -7,7 +7,8 @@ const BASE_URL = "https://gnews.io/api/v4";
 
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
-  const search = searchParams.get("search") || "";
+  const search = searchParams.get("search") || searchParams.get("q") || "";
+  const lang = searchParams.get("lang") || "en";
   let category = searchParams.get("category") || "general";
 
   try {
@@ -15,9 +16,9 @@ export async function GET(request: Request) {
     if (GNEWS_API_KEY && !GNEWS_API_KEY.includes("dummy") && !GNEWS_API_KEY.includes("moviedb")) {
       let url = "";
       if (search) {
-        url = `${BASE_URL}/search?q=${encodeURIComponent(search)}&lang=en&max=100&apikey=${GNEWS_API_KEY}`;
+        url = `${BASE_URL}/search?q=${encodeURIComponent(search)}&lang=${lang}&max=100&apikey=${GNEWS_API_KEY}`;
       } else {
-        url = `${BASE_URL}/top-headlines?category=${category}&lang=en&max=100&apikey=${GNEWS_API_KEY}`;
+        url = `${BASE_URL}/top-headlines?category=${category}&lang=${lang}&max=100&apikey=${GNEWS_API_KEY}`;
       }
 
       const response = await fetch(url);

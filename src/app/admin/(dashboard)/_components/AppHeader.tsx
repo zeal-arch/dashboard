@@ -11,7 +11,7 @@ import { useDebounce } from "@/hooks";
 import { useAppDispatch, useAppSelector } from "@/lib/store/hooks";
 import { setSearchQuery } from "@/lib/store/preferencesSlice";
 import { useTranslation } from "react-i18next";
-import { GoogleTranslate } from "@/components/ui/GoogleTranslate";
+import { LanguageSwitcher } from "@/components/ui/LanguageSwitcher";
 
 export function AppHeader() {
   const { data: session } = useSession();
@@ -23,7 +23,7 @@ export function AppHeader() {
   const [prevGlobalQuery, setPrevGlobalQuery] = useState(globalQuery);
   const [localQuery, setLocalQuery] = useState(globalQuery);
   const debouncedQuery = useDebounce(localQuery, 400);
-  const { t, i18n } = useTranslation();
+  const { t, } = useTranslation();
 
   if (!isSearchPage && globalQuery !== prevGlobalQuery) {
     setPrevGlobalQuery(globalQuery);
@@ -98,7 +98,7 @@ export function AppHeader() {
       {/* User Settings & Account Info (Right) */}
       <div className="flex items-center gap-4">
         {/* Full-Page Translation Widget */}
-        <GoogleTranslate />
+        <LanguageSwitcher />
 
         <Link
           href="/admin/preferences"

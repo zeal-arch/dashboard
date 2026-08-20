@@ -1,0 +1,77 @@
+{
+  "nav": {
+    "explore": "Eksploroni",
+    "search": "Kërko",
+    "trending": "Në trend",
+    "favorites": "Të preferuarat",
+    "history": "Historia",
+    "preferences": "Preferencat"
+  },
+  "feed": {
+    "title": "Furnizimi juaj",
+    "recommendationsTitle": "Rekomanduar për ju",
+    "loading": "Po ngarkohet furnizimi i personalizimit...",
+    "empty": "Nuk ka përmbajtje të disponueshme.",
+    "newAlert": "Është marrë një postim i ri në kohë reale! Kliko për të ngarkuar"
+  },
+  "trending": {
+    "title": "Përmbajtja në trend"
+  },
+  "favorites": {
+    "title": "Të preferuarat tuaja",
+    "empty": "Ende nuk ka të preferuar",
+    "placeholder": "Pëlqeni kartat për të marrë rekomandime të personalizuara",
+    "clearAll": "Pastro të gjitha"
+  },
+  "search": {
+    "title": "Kërkoni përmbajtje",
+    "placeholder": "Kërko për filma, muzikë ose lajme...",
+    "noResults": "Nuk u gjet asnjë rezultat",
+    "noResultsHint": "Provoni një term tjetër kërkimi",
+    "results": "rezultatet"
+  },
+  "preferences": {
+    "title": "Preferencat e përmbajtjes",
+    "theme": "Ndrysho temën",
+    "categories": "Kategoritë e përmbajtjes",
+    "categoriesHint": "Zgjidhni llojet e përmbajtjes që dëshironi të shihni"
+  },
+  "profile": {
+    "title": "Profili",
+    "editProfile": "Redakto profilin",
+    "save": "Ruaj ndryshimet",
+    "name": "Emri",
+    "email": "Email",
+    "bio": "Bio",
+    "location": "Vendndodhja",
+    "website": "Faqja e internetit"
+  },
+  "loginHistory": {
+    "title": "Historia e hyrjes",
+    "device": "Pajisja",
+    "location": "Vendndodhja",
+    "time": "Koha",
+    "status": "Statusi",
+    "success": "Suksese",
+    "failed": "Dështoi"
+  },
+  "chart": {
+    "title": "Analiza e përmbajtjes",
+    "views": "Pamje",
+    "engagement": "fejesa"
+  },
+  "common": {
+    "loading": "Po ngarkohet...",
+    "error": "Ndodhi një gabim",
+    "retry": "Provo sërish",
+    "refresh": "Rifresko",
+    "save": "Ruaj",
+    "cancel": "Anulo",
+    "delete": "Fshije",
+    "close": "Mbylle",
+    "back": "Mbrapa",
+    "next": "Tjetra",
+    "previous": "E mëparshme",
+    "noData": "Nuk ka të dhëna të disponueshme"
+  }
+}

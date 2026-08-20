@@ -1,0 +1,77 @@
+{
+  "nav": {
+    "explore": "Erkunden",
+    "search": "Suchen",
+    "trending": "Im Trend",
+    "favorites": "Favoriten",
+    "history": "Geschichte",
+    "preferences": "Präferenzen"
+  },
+  "feed": {
+    "title": "Ihr Feed",
+    "recommendationsTitle": "Für Sie empfohlen",
+    "loading": "Personalisierungs-Feed wird geladen...",
+    "empty": "Kein Inhalt verfügbar.",
+    "newAlert": "Neuer Echtzeit-Beitrag erhalten! Klicken Sie zum Laden"
+  },
+  "trending": {
+    "title": "Trendinhalte"
+  },
+  "favorites": {
+    "title": "Ihre Favoriten",
+    "empty": "Noch keine Favoriten",
+    "placeholder": "Liken Sie Karten, um personalisierte Empfehlungen zu erhalten",
+    "clearAll": "Alles löschen"
+  },
+  "search": {
+    "title": "Inhalt durchsuchen",
+    "placeholder": "Suchen Sie nach Filmen, Musik oder Nachrichten ...",
+    "noResults": "Keine Ergebnisse gefunden",
+    "noResultsHint": "Versuchen Sie es mit einem anderen Suchbegriff",
+    "results": "Ergebnisse"
+  },
+  "preferences": {
+    "title": "Inhaltseinstellungen",
+    "theme": "Thema umschalten",
+    "categories": "Inhaltskategorien",
+    "categoriesHint": "Wählen Sie die Arten von Inhalten aus, die Sie sehen möchten"
+  },
+  "profile": {
+    "title": "Profil",
+    "editProfile": "Profil bearbeiten",
+    "save": "Änderungen speichern",
+    "name": "Name",
+    "email": "E-Mail",
+    "bio": "Bio",
+    "location": "Standort",
+    "website": "Webseite"
+  },
+  "loginHistory": {
+    "title": "Anmeldeverlauf",
+    "device": "Gerät",
+    "location": "Standort",
+    "time": "Zeit",
+    "status": "Status",
+    "success": "Erfolg",
+    "failed": "Fehlgeschlagen"
+  },
+  "chart": {
+    "title": "Inhaltsanalyse",
+    "views": "Ansichten",
+    "engagement": "Engagement"
+  },
+  "common": {
+    "loading": "Laden...",
+    "error": "Es ist ein Fehler aufgetreten",
+    "retry": "Wiederholen",
+    "refresh": "Aktualisieren",
+    "save": "Speichern",
+    "cancel": "Stornieren",
+    "delete": "Löschen",
+    "close": "Schließen",
+    "back": "Zurück",
+    "next": "Nächste",
+    "previous": "Vorherige",
+    "noData": "Keine Daten verfügbar"
+  }
+}

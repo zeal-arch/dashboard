@@ -1,0 +1,77 @@
+{
+  "nav": {
+    "explore": "Explora",
+    "search": "Cerca",
+    "trending": "Tendència",
+    "favorites": "Preferits",
+    "history": "Història",
+    "preferences": "Preferències"
+  },
+  "feed": {
+    "title": "El teu feed",
+    "recommendationsTitle": "Recomanat per a tu",
+    "loading": "S'està carregant el feed de personalització...",
+    "empty": "No hi ha contingut disponible.",
+    "newAlert": "S'ha rebut una nova publicació en temps real! Feu clic per carregar"
+  },
+  "trending": {
+    "title": "Contingut de tendència"
+  },
+  "favorites": {
+    "title": "Els teus preferits",
+    "empty": "Encara no hi ha cap favorit",
+    "placeholder": "M'agrada targetes per obtenir recomanacions personalitzades",
+    "clearAll": "Esborra-ho tot"
+  },
+  "search": {
+    "title": "Cerca contingut",
+    "placeholder": "Cerca pel·lícules, música o notícies...",
+    "noResults": "No s'han trobat resultats",
+    "noResultsHint": "Prova un terme de cerca diferent",
+    "results": "resultats"
+  },
+  "preferences": {
+    "title": "Preferències de contingut",
+    "theme": "Canvia el tema",
+    "categories": "Categories de contingut",
+    "categoriesHint": "Seleccioneu els tipus de contingut que voleu veure"
+  },
+  "profile": {
+    "title": "Perfil",
+    "editProfile": "Edita el perfil",
+    "save": "Desa els canvis",
+    "name": "Nom",
+    "email": "Correu electrònic",
+    "bio": "bio",
+    "location": "Ubicació",
+    "website": "Lloc web"
+  },
+  "loginHistory": {
+    "title": "Historial d'inici de sessió",
+    "device": "Dispositiu",
+    "location": "Ubicació",
+    "time": "Temps",
+    "status": "Estat",
+    "success": "Èxit",
+    "failed": "Ha fallat"
+  },
+  "chart": {
+    "title": "Analítica de continguts",
+    "views": "Vistes",
+    "engagement": "Compromís"
+  },
+  "common": {
+    "loading": "Carregant...",
+    "error": "S'ha produït un error",
+    "retry": "Torna-ho a provar",
+    "refresh": "Actualitzar",
+    "save": "Desa",
+    "cancel": "Cancel·la",
+    "delete": "Suprimeix",
+    "close": "Tancar",
+    "back": "Enrere",
+    "next": "A continuació",
+    "previous": "Anterior",
+    "noData": "No hi ha dades disponibles"
+  }
+}

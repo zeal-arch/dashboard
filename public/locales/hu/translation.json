@@ -1,0 +1,77 @@
+{
+  "nav": {
+    "explore": "Fedezze fel",
+    "search": "Keresés",
+    "trending": "Felkapott",
+    "favorites": "Kedvencek",
+    "history": "Történelem",
+    "preferences": "Preferences"
+  },
+  "feed": {
+    "title": "Az Ön hírfolyama",
+    "recommendationsTitle": "Önnek ajánlott",
+    "loading": "Személyre szabott hírcsatorna betöltése...",
+    "empty": "Nincs elérhető tartalom.",
+    "newAlert": "Új valós idejű bejegyzés érkezett! Kattintson a betöltéshez"
+  },
+  "trending": {
+    "title": "Felkapott tartalom"
+  },
+  "favorites": {
+    "title": "Kedvenceid",
+    "empty": "Még nincs kedvenc",
+    "placeholder": "Kedvelje a kártyákat, hogy személyre szabott ajánlásokat kapjon",
+    "clearAll": "Minden törlése"
+  },
+  "search": {
+    "title": "Tartalom keresése",
+    "placeholder": "Filmek, zenék vagy hírek keresése...",
+    "noResults": "Nincs találat",
+    "noResultsHint": "Próbálkozzon másik keresési kifejezéssel",
+    "results": "eredményeket"
+  },
+  "preferences": {
+    "title": "Tartalombeállítások",
+    "theme": "Téma váltása",
+    "categories": "Tartalom kategóriák",
+    "categoriesHint": "Válassza ki a megtekinteni kívánt tartalomtípusokat"
+  },
+  "profile": {
+    "title": "Profil",
+    "editProfile": "Profil szerkesztése",
+    "save": "Módosítások mentése",
+    "name": "Név",
+    "email": "Email",
+    "bio": "Bio",
+    "location": "Elhelyezkedés",
+    "website": "Weboldal"
+  },
+  "loginHistory": {
+    "title": "Bejelentkezési előzmények",
+    "device": "Eszköz",
+    "location": "Elhelyezkedés",
+    "time": "Idő",
+    "status": "Állapot",
+    "success": "Siker",
+    "failed": "Sikertelen"
+  },
+  "chart": {
+    "title": "Tartalomelemzés",
+    "views": "Nézetek",
+    "engagement": "Eljegyzés"
+  },
+  "common": {
+    "loading": "Terhelés...",
+    "error": "Hiba történt",
+    "retry": "Próbálja újra",
+    "refresh": "Frissítés",
+    "save": "Megtakarítás",
+    "cancel": "Mégsem",
+    "delete": "Töröl",
+    "close": "Közeli",
+    "back": "Vissza",
+    "next": "Következő",
+    "previous": "Előző",
+    "noData": "Nincs adat"
+  }
+}

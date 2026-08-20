@@ -1,0 +1,77 @@
+{
+  "nav": {
+    "explore": "Tutkia",
+    "search": "Haku",
+    "trending": "Trendaavat",
+    "favorites": "Suosikit",
+    "history": "Historia",
+    "preferences": "Asetukset"
+  },
+  "feed": {
+    "title": "Oma syötteesi",
+    "recommendationsTitle": "Suositellaan sinulle",
+    "loading": "Ladataan personointisyötettä...",
+    "empty": "Sisältöä ei ole saatavilla.",
+    "newAlert": "Uusi reaaliaikainen postaus vastaanotettu! Napsauta ladataksesi"
+  },
+  "trending": {
+    "title": "Trendikäs sisältö"
+  },
+  "favorites": {
+    "title": "Omat suosikit",
+    "empty": "Ei vielä suosikkeja",
+    "placeholder": "Tykkää korteista saadaksesi henkilökohtaisia ​​suosituksia",
+    "clearAll": "Tyhjennä kaikki"
+  },
+  "search": {
+    "title": "Hae sisältöä",
+    "placeholder": "Hae elokuvia, musiikkia tai uutisia...",
+    "noResults": "Tuloksia ei löytynyt",
+    "noResultsHint": "Kokeile toista hakutermiä",
+    "results": "tuloksia"
+  },
+  "preferences": {
+    "title": "Sisältöasetukset",
+    "theme": "Vaihda teema",
+    "categories": "Sisältöluokat",
+    "categoriesHint": "Valitse haluamasi sisällön tyypit"
+  },
+  "profile": {
+    "title": "Profiili",
+    "editProfile": "Muokkaa profiilia",
+    "save": "Tallenna muutokset",
+    "name": "Nimi",
+    "email": "Sähköposti",
+    "bio": "Bio",
+    "location": "Sijainti",
+    "website": "Verkkosivusto"
+  },
+  "loginHistory": {
+    "title": "Kirjautumishistoria",
+    "device": "Laite",
+    "location": "Sijainti",
+    "time": "Aika",
+    "status": "Status",
+    "success": "Menestys",
+    "failed": "Epäonnistui"
+  },
+  "chart": {
+    "title": "Sisältöanalyysi",
+    "views": "Näkymät",
+    "engagement": "Kihlaus"
+  },
+  "common": {
+    "loading": "Ladataan...",
+    "error": "Tapahtui virhe",
+    "retry": "Yritä uudelleen",
+    "refresh": "Päivitä",
+    "save": "Tallentaa",
+    "cancel": "Peruuttaa",
+    "delete": "Poistaa",
+    "close": "Lähellä",
+    "back": "Takaisin",
+    "next": "Seuraavaksi",
+    "previous": "Edellinen",
+    "noData": "Tietoja ei ole saatavilla"
+  }
+}

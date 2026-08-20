@@ -1,0 +1,77 @@
+{
+  "nav": {
+    "explore": "Mengeksplorasi",
+    "search": "Mencari",
+    "trending": "Sedang tren",
+    "favorites": "Favorit",
+    "history": "Sejarah",
+    "preferences": "Preferensi"
+  },
+  "feed": {
+    "title": "Umpan Anda",
+    "recommendationsTitle": "Direkomendasikan untuk Anda",
+    "loading": "Memuat umpan personalisasi...",
+    "empty": "Tidak ada konten yang tersedia.",
+    "newAlert": "Pos real-time baru diterima! Klik untuk memuat"
+  },
+  "trending": {
+    "title": "Konten yang Sedang Tren"
+  },
+  "favorites": {
+    "title": "Favorit Anda",
+    "empty": "Belum ada favorit",
+    "placeholder": "Sukai kartu untuk mendapatkan rekomendasi yang dipersonalisasi",
+    "clearAll": "Hapus semuanya"
+  },
+  "search": {
+    "title": "Cari Konten",
+    "placeholder": "Telusuri film, musik, atau berita...",
+    "noResults": "Tidak ada hasil yang ditemukan",
+    "noResultsHint": "Coba istilah pencarian lain",
+    "results": "hasil"
+  },
+  "preferences": {
+    "title": "Preferensi Konten",
+    "theme": "Alihkan Tema",
+    "categories": "Kategori Konten",
+    "categoriesHint": "Pilih jenis konten yang ingin Anda lihat"
+  },
+  "profile": {
+    "title": "Profil",
+    "editProfile": "Sunting Profil",
+    "save": "Simpan perubahan",
+    "name": "Nama",
+    "email": "E-mail",
+    "bio": "Biografi",
+    "location": "Lokasi",
+    "website": "Situs web"
+  },
+  "loginHistory": {
+    "title": "Riwayat Masuk",
+    "device": "Perangkat",
+    "location": "Lokasi",
+    "time": "Waktu",
+    "status": "Status",
+    "success": "Kesuksesan",
+    "failed": "Gagal"
+  },
+  "chart": {
+    "title": "Analisis Konten",
+    "views": "Tampilan",
+    "engagement": "Pertunangan"
+  },
+  "common": {
+    "loading": "Memuat...",
+    "error": "Terjadi kesalahan",
+    "retry": "Mencoba kembali",
+    "refresh": "Menyegarkan",
+    "save": "Menyimpan",
+    "cancel": "Membatalkan",
+    "delete": "Menghapus",
+    "close": "Menutup",
+    "back": "Kembali",
+    "next": "Berikutnya",
+    "previous": "Sebelumnya",
+    "noData": "Tidak ada data yang tersedia"
+  }
+}

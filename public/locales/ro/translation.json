@@ -1,0 +1,77 @@
+{
+  "nav": {
+    "explore": "Explora",
+    "search": "Căutare",
+    "trending": "Trending",
+    "favorites": "Favorite",
+    "history": "Istorie",
+    "preferences": "Preferințe"
+  },
+  "feed": {
+    "title": "Feed-ul dvs",
+    "recommendationsTitle": "Recomandat pentru tine",
+    "loading": "Se încarcă feedul de personalizare...",
+    "empty": "Nu există conținut disponibil.",
+    "newAlert": "A primit o nouă postare în timp real! Faceți clic pentru a încărca"
+  },
+  "trending": {
+    "title": "Conținut în tendințe"
+  },
+  "favorites": {
+    "title": "Favoritele tale",
+    "empty": "Încă nu sunt favorite",
+    "placeholder": "Apreciați carduri pentru a obține recomandări personalizate",
+    "clearAll": "Ștergeți totul"
+  },
+  "search": {
+    "title": "Căutați conținut",
+    "placeholder": "Căutați filme, muzică sau știri...",
+    "noResults": "Nu s-au găsit rezultate",
+    "noResultsHint": "Încercați un alt termen de căutare",
+    "results": "rezultate"
+  },
+  "preferences": {
+    "title": "Preferințe de conținut",
+    "theme": "Comutați tema",
+    "categories": "Categorii de conținut",
+    "categoriesHint": "Selectați tipurile de conținut pe care doriți să le vedeți"
+  },
+  "profile": {
+    "title": "Profil",
+    "editProfile": "Editați profilul",
+    "save": "Salvați modificările",
+    "name": "Nume",
+    "email": "E-mail",
+    "bio": "bio",
+    "location": "Locaţie",
+    "website": "Site-ul web"
+  },
+  "loginHistory": {
+    "title": "Istoricul de conectare",
+    "device": "Dispozitiv",
+    "location": "Locaţie",
+    "time": "Timp",
+    "status": "Stare",
+    "success": "Succes",
+    "failed": "A eșuat"
+  },
+  "chart": {
+    "title": "Analiza conținutului",
+    "views": "Vizualizări",
+    "engagement": "Logodnă"
+  },
+  "common": {
+    "loading": "Încărcare...",
+    "error": "A apărut o eroare",
+    "retry": "Reîncercați",
+    "refresh": "Reîmprospăta",
+    "save": "Salva",
+    "cancel": "Anula",
+    "delete": "Şterge",
+    "close": "Aproape",
+    "back": "Spate",
+    "next": "Următorul",
+    "previous": "Anterior",
+    "noData": "Nu există date disponibile"
+  }
+}

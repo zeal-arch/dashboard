@@ -1,0 +1,77 @@
+{
+  "nav": {
+    "explore": "Araşdırın",
+    "search": "Axtar",
+    "trending": "Trend",
+    "favorites": "Sevimlilər",
+    "history": "Tarix",
+    "preferences": "Üstünlüklər"
+  },
+  "feed": {
+    "title": "Lentiniz",
+    "recommendationsTitle": "Sizin üçün tövsiyə olunur",
+    "loading": "Fərdiləşdirmə lenti yüklənir...",
+    "empty": "Əlçatan məzmun yoxdur.",
+    "newAlert": "Yeni real vaxt postu alındı! Yükləmək üçün klikləyin"
+  },
+  "trending": {
+    "title": "Trend Məzmun"
+  },
+  "favorites": {
+    "title": "Sevimliləriniz",
+    "empty": "Hələ favorit yoxdur",
+    "placeholder": "Fərdiləşdirilmiş tövsiyələr əldə etmək üçün kartları bəyənin",
+    "clearAll": "Hamısını silin"
+  },
+  "search": {
+    "title": "Məzmunu axtarın",
+    "placeholder": "Filmləri, musiqiləri və ya xəbərləri axtarın...",
+    "noResults": "Heç bir nəticə tapılmadı",
+    "noResultsHint": "Fərqli axtarış termini sınayın",
+    "results": "nəticələr"
+  },
+  "preferences": {
+    "title": "Məzmun Tərcihləri",
+    "theme": "Mövzunu dəyişin",
+    "categories": "Məzmun Kateqoriyaları",
+    "categoriesHint": "Görmək istədiyiniz məzmun növlərini seçin"
+  },
+  "profile": {
+    "title": "Profil",
+    "editProfile": "Profili redaktə edin",
+    "save": "Dəyişiklikləri yadda saxlayın",
+    "name": "ad",
+    "email": "E-poçt",
+    "bio": "Bio",
+    "location": "Məkan",
+    "website": "Veb sayt"
+  },
+  "loginHistory": {
+    "title": "Giriş Tarixçəsi",
+    "device": "Cihaz",
+    "location": "Məkan",
+    "time": "Vaxt",
+    "status": "Vəziyyət",
+    "success": "Uğur",
+    "failed": "Uğursuz oldu"
+  },
+  "chart": {
+    "title": "Məzmun Analitikası",
+    "views": "Baxışlar",
+    "engagement": "Nişan"
+  },
+  "common": {
+    "loading": "Yüklənir...",
+    "error": "Xəta baş verdi",
+    "retry": "Yenidən cəhd edin",
+    "refresh": "Yeniləyin",
+    "save": "Saxla",
+    "cancel": "Ləğv et",
+    "delete": "Sil",
+    "close": "Bağlayın",
+    "back": "Geri",
+    "next": "Sonrakı",
+    "previous": "Əvvəlki",
+    "noData": "Məlumat yoxdur"
+  }
+}

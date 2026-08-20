@@ -1,0 +1,77 @@
+{
+  "nav": {
+    "explore": "Utforska",
+    "search": "Söka",
+    "trending": "Trendigt",
+    "favorites": "Favoriter",
+    "history": "Historia",
+    "preferences": "Inställningar"
+  },
+  "feed": {
+    "title": "Ditt flöde",
+    "recommendationsTitle": "Rekommenderas för dig",
+    "loading": "Laddar anpassningsflöde...",
+    "empty": "Inget innehåll tillgängligt.",
+    "newAlert": "Nytt inlägg i realtid mottaget! Klicka för att ladda"
+  },
+  "trending": {
+    "title": "Trendigt innehåll"
+  },
+  "favorites": {
+    "title": "Dina favoriter",
+    "empty": "Inga favoriter än",
+    "placeholder": "Gilla kort för att få personliga rekommendationer",
+    "clearAll": "Rensa alla"
+  },
+  "search": {
+    "title": "Sök innehåll",
+    "placeholder": "Sök efter filmer, musik eller nyheter...",
+    "noResults": "Inga resultat hittades",
+    "noResultsHint": "Prova en annan sökterm",
+    "results": "resultat"
+  },
+  "preferences": {
+    "title": "Innehållsinställningar",
+    "theme": "Växla tema",
+    "categories": "Innehållskategorier",
+    "categoriesHint": "Välj de typer av innehåll du vill se"
+  },
+  "profile": {
+    "title": "Profil",
+    "editProfile": "Redigera profil",
+    "save": "Spara ändringar",
+    "name": "Namn",
+    "email": "E-post",
+    "bio": "Bio",
+    "location": "Plats",
+    "website": "Webbplats"
+  },
+  "loginHistory": {
+    "title": "Inloggningshistorik",
+    "device": "Anordning",
+    "location": "Plats",
+    "time": "Tid",
+    "status": "Status",
+    "success": "Framgång",
+    "failed": "Misslyckades"
+  },
+  "chart": {
+    "title": "Innehållsanalys",
+    "views": "Visningar",
+    "engagement": "Engagemang"
+  },
+  "common": {
+    "loading": "Belastning...",
+    "error": "Ett fel uppstod",
+    "retry": "Försöka igen",
+    "refresh": "Uppdatera",
+    "save": "Spara",
+    "cancel": "Avboka",
+    "delete": "Radera",
+    "close": "Nära",
+    "back": "Tillbaka",
+    "next": "Nästa",
+    "previous": "Tidigare",
+    "noData": "Inga data tillgängliga"
+  }
+}
