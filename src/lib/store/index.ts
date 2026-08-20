@@ -21,7 +21,7 @@ const rootReducer = combineReducers({
   favorites: favoritesReducer,
 });
 
-const persistConfig = {
+export const persistConfig = {
   key: "root",
   storage,
   version: 3, // bump this to clear/migrate old schema
