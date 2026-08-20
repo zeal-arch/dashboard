@@ -11,6 +11,7 @@ import { useDebounce } from "@/hooks";
 import { useAppDispatch, useAppSelector } from "@/lib/store/hooks";
 import { setSearchQuery } from "@/lib/store/preferencesSlice";
 import { useTranslation } from "react-i18next";
+import { GoogleTranslate } from "@/components/ui/GoogleTranslate";
 
 export function AppHeader() {
   const { data: session } = useSession();
@@ -70,14 +71,9 @@ export function AppHeader() {
       ]
     );
 
-  const toggleLanguage = () => {
-    const nextLang = i18n.language === "en" ? "es" : "en";
-    i18n.changeLanguage(nextLang);
-  };
-
   // If the user is currently on the Search page, we can hide the mini-search in the header
   // to avoid confusing duplicate search bars.
-  
+
   return (
     <header className="mb-2 flex w-full items-center justify-between gap-4 px-2 py-1 sm:px-4">
 
@@ -101,17 +97,8 @@ export function AppHeader() {
 
       {/* User Settings & Account Info (Right) */}
       <div className="flex items-center gap-4">
-        {/* Language switch button */}
-        <button
-          onClick={toggleLanguage}
-          title="Toggle Language / Alternar Idioma"
-          className={cn(
-            getGlassButtonClass(false),
-            "text-[10px] font-bold font-satoshi flex items-center justify-center tracking-wider text-gray-700 dark:text-gray-200"
-          )}
-        >
-          {i18n.language === "es" ? "ES" : "EN"}
-        </button>
+        {/* Full-Page Translation Widget */}
+        <GoogleTranslate />
 
         <Link
           href="/admin/preferences"

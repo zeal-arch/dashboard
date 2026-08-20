@@ -10,29 +10,13 @@ test.describe('Bonus Features Flow', () => {
     await page.waitForURL('/admin/feed');
   });
 
-  test('should toggle language between English and Spanish', async ({ page }) => {
+  test('should render Google Translate widget', async ({ page }) => {
     // Wait for feed to hydrate
     await page.waitForTimeout(1000);
-    await page.waitForSelector('button[aria-label="Drag to reorder"]');
 
-    // 1. Check initial English state
-    await expect(page.locator('h2:has-text("Your Feed")')).toBeVisible();
-    
-    // Find the toggle language button in the header
-    const langBtn = page.locator('button[title*="Toggle Language"]');
-    await expect(langBtn).toContainText('EN');
-
-    // 2. Click to toggle to Spanish
-    await langBtn.click();
-
-    // The language button should update to "ES" and page content should translate
-    await expect(langBtn).toContainText('ES');
-    await expect(page.locator('h2:has-text("Tu Feed")')).toBeVisible();
-
-    // 3. Toggle back to English
-    await langBtn.click();
-    await expect(langBtn).toContainText('EN');
-    await expect(page.locator('h2:has-text("Your Feed")')).toBeVisible();
+    // Verify the Google Translate DOM element is injected in the header
+    const translateDiv = page.locator('#google_translate_element');
+    await expect(translateDiv).toBeAttached();
   });
 
   test('should receive and append real-time posts via SSE', async ({ page }) => {
