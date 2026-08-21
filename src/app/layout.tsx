@@ -2,6 +2,7 @@ import "@/styles/globals.css";
 import { inter, mulish, playfair } from "@/lib/fonts";
 import NextAuthProvider from "@/components/NextAuthProvider";
 import { ThemeProvider } from "next-themes";
+import { Analytics } from "@vercel/analytics/react";
 
 export const metadata = {
   title: "Personalized Content Dashboard",
@@ -33,7 +34,9 @@ export default function RootLayout({
             {children}
           </ThemeProvider>
         </NextAuthProvider>
+        <Analytics />
       </body>
     </html>
   );
 }
+
